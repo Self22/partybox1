@@ -1,0 +1,160 @@
+//tools
+@import "_misc/mixins";
+@import "_misc/normalize";
+
+//
+@import "fonts";
+
+
+
+* {
+  @include box-sizing(border-box);
+
+}
+
+html, body {
+  min-height: 100%;
+  font-family: 'NeoSansW1G';
+  width: 100%;
+  line-height: 1.42;
+  position: relative;
+}
+
+.main__menu{
+  height: 80px;
+  background: rgba(255, 255, 255, 0.7);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main__menu-link{
+  font-family: 'NeoSansW1G-Bold', Optima,sans-serif;;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.menu-item-logo{
+  flex: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-item-about{
+  flex: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-item-servises{
+  position: relative;
+  flex: 180;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::after{
+    content: '';
+    position: absolute;
+
+    border-top: 5px solid black;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    right: 40px;
+  }
+}
+.menu-item-franshize{
+  flex: 160;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-item-contacts{
+  flex: 150;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-item-order{
+   flex: 400;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+    }
+
+
+.order__button{
+  font-family: 'NeoSansW1G-Bold', Optima,sans-serif;;
+  font-size: 16px;
+  text-decoration: none;
+  background: #D10019;
+  padding:15px 45px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  color: white;
+
+  & span{
+    color: black;
+  }
+
+}
+
+.menu-item-lg{
+  flex: 150;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.yellow__footer{
+  background: #FBA200;
+  padding: 55px 7%;
+}
+
+.yellow__footer-contacts {
+  display: flex;
+  flex-direction: column;
+  }
+
+.footer__town {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 10%;
+
+}
+.town__name {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: white;
+
+}
+.points {
+  align-self: center;
+  color: white;
+}
+.town__tel {
+  font-size: 24px;
+  text-decoration: none !important;
+  color: white;
+
+}
+.footer__mail {
+  font-size: 24px;
+  text-decoration: none !important;
+
+  & a{
+    color: white !important;
+  }
+
+}
+.yellow__footer-form {
+
+}
+.form__text {
+
+}
