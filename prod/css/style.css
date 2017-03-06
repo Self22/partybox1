@@ -401,7 +401,7 @@ html, body {
 .main__menu-link {
   font-family: 'NeoSansW1G-Bold', Optima,sans-serif;
   font-size: 16px;
-  text-decoration: none; }
+  text-decoration: none !important; }
 
 .menu-item-logo {
   -webkit-box-flex: 300;
@@ -568,5 +568,44 @@ html, body {
   text-decoration: none !important; }
   .footer__mail a {
     color: white !important; }
+
+.yellow__footer-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center; }
+
+.form__field {
+  text-align: center; }
+
+.form__text {
+  font-size: 24px;
+  color: white;
+  text-align: center;
+  margin-bottom: 50px; }
+
+.form__label {
+  width: 100%; }
+
+.form__input {
+  width: 75%;
+  padding: 7px 0 7px 20%;
+  border: none;
+  border-radius: 20px;
+  font-size: 24px; }
+
+.form__button {
+  width: 75%;
+  background: red;
+  padding: 7px 26%;
+  border: none;
+  border-radius: 20px;
+  font-size: 24px;
+  color: white; }
 
 /*# sourceMappingURL=style.css.map */
