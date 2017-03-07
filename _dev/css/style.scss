@@ -40,6 +40,13 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  & a {
+    width: 55%;
+    height: 100%;
+  }
+
+
 }
 .menu-item-about{
   flex: 100;
@@ -146,6 +153,7 @@ html, body {
 .footer__mail {
   font-size: 24px;
   text-decoration: none !important;
+  text-transform: uppercase;
 
   & a{
     color: white !important;
@@ -176,7 +184,7 @@ html, body {
 
 .form__input {
   width: 75%;
-  padding: 7px 0 7px 20%;
+  padding: 7px 0 7px 24%;
   border: none;
   border-radius: 20px;
   font-size: 24px;
@@ -190,4 +198,89 @@ html, body {
   border-radius: 20px;
   font-size: 24px;
   color: white;
+}
+
+.envelope {
+  margin-right: 7%;
+
+  & img {
+    width: 30px;
+    height: auto;
+    margin-bottom: 5px;
+  }
+}
+
+.black__footer {
+  background: #2B2B2B;
+  color: white;
+  font-size: 18px;
+  padding: 55px 7%;
+}
+
+.black__footer-left ul, .black__footer-left li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.black__footer-left {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer__nav-left {
+  flex: 180;
+}
+
+.footer__nav-right {
+  flex: 420;
+
+}
+
+.black__footer-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.its__time {
+  margin-right: 7%;
+}
+
+.footer__order {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 140px;
+
+}
+
+.footer__socials {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+
+  & p {
+    margin-right: 7%;
+  }
+
+}
+
+.socials__icon {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer__socials-link {
+  width: 45px;
+  margin-right: 15px;
+
+  & img {
+    max-width: 100%;
+    height: auto;
+  }
 }
