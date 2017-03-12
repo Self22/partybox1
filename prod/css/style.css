@@ -403,6 +403,10 @@ html, body {
 
 .menu__item {
   height: 45px; }
+  .menu__item-active {
+    background: #FBD615; }
+    .menu__item-active a {
+      color: black; }
   .menu__item:hover {
     background: #FBD615; }
     .menu__item:hover a {
@@ -793,11 +797,8 @@ html, body {
     max-width: 100%;
     height: auto; }
 
-.header__index {
+.header {
   height: 565px;
-  background: url("../img/header_services1.jpg") no-repeat;
-  background-size: cover;
-  background-position-y: -70px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -812,10 +813,28 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  @media screen and (max-width: 768px) {
+    .header {
+      height: 70vh; } }
+
+.header__index {
+  background: url("../img/header_index.jpg") no-repeat;
+  background-size: cover;
+  background-position-y: -70px; }
   @media screen and (max-width: 1200px) {
     .header__index {
       background-position-y: 0;
       background-position-x: 50%; } }
+
+.header__about {
+  background: url("../img/header_about.jpg") no-repeat;
+  background-size: cover;
+  background-position-y: -90px; }
+
+.header__text {
+  font-size: 24px;
+  font-family: "Neo Sans W1G", Optima, sans-serif;
+  color: white; }
 
 .header__order-button {
   font-family: 'NeoSansW1G-Bold', Optima, sans-serif;
@@ -836,8 +855,10 @@ html, body {
   font-size: 60px;
   color: white;
   margin-bottom: 45px; }
+  .main__slogan-about {
+    margin-bottom: 0; }
 
-.header__index-slogan {
+.header__slogan-index {
   text-transform: uppercase;
   padding: 0;
   margin: 0;
@@ -845,6 +866,80 @@ html, body {
   font-size: 40px;
   color: white;
   margin-bottom: 25px; }
+
+.text__section {
+  padding: 25px 14% 30px; }
+  .text__section p {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 30px;
+    font-size: 16px;
+    font-family: "Neo Sans W1G", Optima, sans-serif; }
+
+.glasses__girls {
+  height: 725px;
+  background: url("../img/glasses__girls.jpg") no-repeat;
+  background-size: cover; }
+  @media screen and (max-width: 768px) {
+    .glasses__girls {
+      height: 70vh; } }
+
+.helloween__girls {
+  height: 670px;
+  background: url("../img/helloween__girls.jpg") no-repeat;
+  background-size: cover;
+  background-position-y: 50%; }
+  @media screen and (max-width: 768px) {
+    .helloween__girls {
+      height: 70vh;
+      background-position-x: 50%; } }
+
+.about__order {
+  background: #EBECEC;
+  padding: 50px 5% 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch; }
+
+.about__order-item {
+  border-radius: 10px;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.3);
+  background: white;
+  padding: 25px 2% 30px;
+  -webkit-box-flex: 29%;
+      -ms-flex: 29%;
+          flex: 29%;
+  margin: 0 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.about__order-title {
+  font-family: "Neo Sans W1G", Optima, sans-serif;
+  font-size: 24px;
+  color: #CD4A43;
+  text-align: center;
+  margin-bottom: 30px; }
+
+.about__order-text {
+  margin-bottom: 40px; }
+
+.about__order-button {
+  margin-top: auto;
+  cursor: pointer; }
 
 .logophb__section {
   padding: 70px 21% 0 21%;
@@ -911,7 +1006,8 @@ html, body {
 
 .bx-wrapper {
   box-shadow: none;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  border: none; }
 
 .main__joy-title {
   font-family: "Neo Sans W1G", Optima, sans-serif;
