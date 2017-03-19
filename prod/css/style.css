@@ -403,7 +403,7 @@ textarea {
       color: black; }
 
 .main__menu-link {
-  font-family: 'NeoSansW1G-Bold', Optima,sans-serif;
+  font-family: 'NeoSansW1G-Bold', Optima, sans-serif;
   font-size: 16px;
   text-decoration: none !important;
   color: black; }
@@ -533,7 +533,7 @@ textarea {
 .order__button {
   border: none;
   cursor: pointer;
-  font-family: 'NeoSansW1G-Bold', Optima,sans-serif;
+  font-family: 'NeoSansW1G-Bold', Optima, sans-serif;
   font-size: 16px;
   text-decoration: none;
   background: #D10019;
@@ -1034,45 +1034,29 @@ html, body {
     .glasses__girls {
       height: 70vh; } }
 
-.glasses__girls2 {
-  height: 635px;
-  background: url("../img/glasses__girls2.jpg") no-repeat;
-  background-size: cover; }
-  @media screen and (max-width: 768px) {
-    .glasses__girls2 {
-      height: 70vh; } }
+.glasses__girls2 img {
+  max-width: 100%;
+  height: auto; }
 
-.queen {
-  height: 635px;
-  background: url("../img/queen.jpg") no-repeat;
-  background-size: cover; }
-  @media screen and (max-width: 768px) {
-    .queen {
-      height: 70vh; } }
+.queen img {
+  max-width: 100%;
+  height: auto; }
 
-.bitches {
-  height: 695px;
-  background: url("../img/bitches.jpg") no-repeat;
-  background-size: cover; }
-  @media screen and (max-width: 768px) {
-    .bitches {
-      height: 70vh; } }
+.bitches img {
+  max-width: 100%;
+  height: auto; }
 
 .photozone__scheme1 {
-  height: 600px;
-  background: url("../img/photobooth__combine2.jpg") no-repeat;
-  background-size: cover; }
-  @media screen and (max-width: 768px) {
-    .photozone__scheme1 {
-      height: 70vh; } }
+  text-align: center; }
+  .photozone__scheme1 img {
+    max-width: 100%;
+    height: auto; }
 
 .ptotobooth__branding {
-  height: 635px;
-  background: url("../img/photobooth__combine1.jpg") no-repeat;
-  background-size: cover; }
-  @media screen and (max-width: 768px) {
-    .ptotobooth__branding {
-      height: 70vh; } }
+  text-align: center; }
+  .ptotobooth__branding img {
+    max-width: 100%;
+    height: auto; }
 
 .helloween__girls {
   height: 670px;
