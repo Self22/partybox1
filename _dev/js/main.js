@@ -11,5 +11,5 @@ $('.ticker__slider').bxSlider({
     slideWidth: 170,
     slideMargin: 10,
     ticker: true,
-    speed: 35000
+    speed: 200000
 });

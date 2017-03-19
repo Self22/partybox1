@@ -1,11 +1,12 @@
 //tools
 @import "_misc/mixins";
 @import "_misc/normalize";
-
-//
+//fonts
 @import "fonts";
-
-
+//partials
+@import "partials/footer";
+@import "partials/main_nav";
+@import "partials/animanions";
 
 * {
   @include box-sizing(border-box);
@@ -20,206 +21,7 @@ html, body {
   position: relative;
 }
 
-.main__menu{
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 80px;
-  background: rgba(255, 255, 255, 0.7);
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: center;
-}
 
-.menu__item {
-  height: 45px;
-
-  &-active {
-    background: #FBD615;
-
-    & a {
-      color: black;
-    }
-  }
-
-  &:hover {
-    background: #FBD615;
-
-    & a {
-      color: black;
-    }
-  }
-}
-
-.main__menu-link{
-  font-family: 'NeoSansW1G-Bold', Optima,sans-serif;;
-  font-size: 16px;
-  text-decoration: none !important;
-  color: black;
-}
-
-.main__menu-link-services {
-  padding-right: 15px;
-}
-
-.menu-item-logo{
-  flex: 300;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  & a {
-    width: 170px;
-    height: 100%;
-  }
-
-
-}
-.menu-item-about{
-  flex: 100;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.menu-item-servises{
-  position: relative;
-  flex: 180;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &::after{
-    content: '';
-    position: absolute;
-
-    border-top: 5px solid black;
-    border-right: 5px solid transparent;
-    border-left: 5px solid transparent;
-    right: 40px;
-  }
-}
-
-.dropdown__services {
-  display: none;
-  position: absolute;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 115%;
-  top: 45px;
-  left: 0;
-  z-index: 2;
-
-  & li {
-    margin: 0;
-    padding: 0;
-  }
-
-  & a {
-    font-family: 'NeoSansW1G-Bold', Optima, sans-serif;;
-    font-size: 16px;
-    text-decoration: none;
-    color: black;
-    display: block;
-    padding: 18px 18px;
-    background: #FBD615;
-
-    &:hover {
-      background: white;
-      color: black;
-    }
-  }
-}
-
-.menu-item-servises:hover .dropdown__services {
-  display: block;
-}
-
-.menu-item-franshize{
-  flex: 160;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.menu-item-contacts{
-  flex: 150;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.menu-item-order{
-   flex: 400;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-
-    }
-
-
-.order__button{
-  font-family: 'NeoSansW1G-Bold', Optima,sans-serif;;
-  font-size: 16px;
-  text-decoration: none;
-  background: #D10019;
-  padding:15px 45px;
-  border-radius: 30px;
-  text-transform: uppercase;
-  color: white;
-
-  & span{
-    color: black;
-  }
-
-  &:hover {
-    text-decoration: none;
-  }
-
-}
-
-.menu-item-lg{
-  flex: 70;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 2%;
-  margin-right: 2%;
-  position: relative;
-
-  &::after {
-    content: '';
-    position: absolute;
-
-    border-top: 5px solid black;
-    border-right: 5px solid transparent;
-    border-left: 5px solid transparent;
-    right: 11px;
-  }
-}
-
-.dropdown__lg {
-  display: none;
-  position: absolute;
-  font-family: 'NeoSansW1G-Bold', Optima, sans-serif;;
-  font-size: 16px;
-  text-decoration: none;
-  color: black;
-  background: #FBD615;
-  top: 45px;
-  height: 45px;
-  padding-top: 9px;
-  width: 100%;
-  padding-left: 35%;
-
-  &:hover {
-    background: white;
-    color: black;
-  }
-}
-
-.menu-item-lg:hover .dropdown__lg {
-  display: block;
-}
 
 
 .yellow__footer{
@@ -429,10 +231,36 @@ html, body {
 
 }
 
+.header__photobooth {
+  height: 645px;
+  background: url("../img/photobooth__header.jpg") no-repeat;
+  background-size: cover;
+}
+
+.header__franshize {
+  height: 465px;
+  background: white;
+  padding-bottom: 15px;
+}
+
+.header__logo {
+
+  width: 25%;
+
+  & img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
 .header__text {
   font-size: 24px;
   font-family: "Neo Sans W1G", Optima, sans-serif;
   color: white;
+
+  &-franshize {
+    color: black;
+  }
 
 }
 
@@ -450,15 +278,22 @@ html, body {
 }
 
 .main__slogan {
+  text-transform: uppercase;
   padding: 0;
   margin: 0;
   font-family: 'NeoSansW1G-Bold', Optima, sans-serif;
-  font-size: 60px;
+  font-size: 70px;
   color: white;
   margin-bottom: 45px;
 
   &-about {
     margin-bottom: 0;
+  }
+
+  &-franshize {
+    color: black;
+    font-size: 70px;
+    margin-bottom: 5px;
   }
 }
 
@@ -474,7 +309,8 @@ html, body {
 
 .text__section {
 
-  padding: 25px 14% 30px;
+  padding: 25px 14% 25px;
+  margin: 0;
 
   & p {
     margin: 0;
@@ -482,6 +318,22 @@ html, body {
     padding-bottom: 30px;
     font-size: 16px;
     font-family: "Neo Sans W1G", Optima, sans-serif;
+  }
+
+  &-franshize {
+    color: black;
+    padding: 16px 14% 10px;
+  }
+
+  &-center {
+    text-align: center;
+  }
+
+  &-big {
+    text-align: center;
+    & p {
+      font-size: 36px;
+    }
   }
 }
 
@@ -495,11 +347,73 @@ html, body {
   }
 }
 
+.glasses__girls2 {
+  height: 635px;
+  background: url("../img/glasses__girls2.jpg") no-repeat;
+  background-size: cover;
+
+  @include tablets {
+    height: 70vh;
+  }
+}
+
+.queen {
+  height: 635px;
+  background: url("../img/queen.jpg") no-repeat;
+  background-size: cover;
+
+  @include tablets {
+    height: 70vh;
+  }
+}
+
+.bitches {
+  height: 695px;
+  background: url("../img/bitches.jpg") no-repeat;
+  background-size: cover;
+
+  @include tablets {
+    height: 70vh;
+  }
+}
+
+.photozone__scheme1 {
+  height: 600px;
+  background: url("../img/photobooth__combine2.jpg") no-repeat;
+  background-size: cover;
+
+  @include tablets {
+    height: 70vh;
+  }
+}
+
+.ptotobooth__branding {
+  height: 635px;
+  background: url("../img/photobooth__combine1.jpg") no-repeat;
+  background-size: cover;
+
+  @include tablets {
+    height: 70vh;
+  }
+}
+
 .helloween__girls {
   height: 670px;
   background: url("../img/helloween__girls.jpg") no-repeat;
   background-size: cover;
   background-position-y: 50%;
+
+  @include tablets {
+    height: 70vh;
+    background-position-x: 50%;
+
+  }
+}
+
+.handshake__photo {
+  height: 615px;
+  background: url("../img/handshake__photo.jpg") no-repeat;
+  background-size: cover;
 
   @include tablets {
     height: 70vh;
@@ -524,9 +438,10 @@ html, body {
   background: white;
   padding: 25px 2% 30px;
   flex: 29%;
-  margin: 0 2%;
+  margin: 0 2% 25px;
   display: flex;
   flex-direction: column;
+
 }
 
 .about__order-title {
@@ -544,6 +459,47 @@ html, body {
 .about__order-button {
   margin-top: auto;
   cursor: pointer;
+  text-align: center;
+}
+
+.logo__big-block {
+  display: flex;
+  flex-flow: column;
+  padding: 0 7% 0;
+
+  & .text__section:first-child {
+    text-align: center;
+    padding-top: 60px;
+
+  }
+
+  & .text__section:last-child {
+    text-align: center;
+
+    padding-bottom: 50px;
+  }
+}
+
+.logo__big-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo__big-item {
+
+  flex: 16%;
+  padding: 2%;
+
+  & img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  @include phones {
+    flex: 25%;
+  }
 }
 
 .logophb__section {
@@ -601,6 +557,10 @@ html, body {
   border: none;
 }
 
+.main__joy {
+  padding-top: 30px;
+}
+
 .main__joy-title {
   font-family: "Neo Sans W1G", Optima, sans-serif;
   font-size: 24px;
@@ -618,7 +578,7 @@ html, body {
 }
 
 .ticker {
-  padding: 0 0 50px 0;
+  padding: 0;
 }
 
 .ticker__slider {
@@ -641,3 +601,82 @@ html, body {
     height: auto;
   }
 }
+
+.photoboxes {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 15% 50px;
+
+  & img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+///////////// photobooth price
+
+.photobooth__price {
+  padding: 20px 7% 40px;
+}
+
+.photobooth__price-table {
+  width: 100%;
+
+  & td {
+    text-align: center;
+    color: #D76A43;
+    font-size: 30px;
+  }
+}
+
+.grey {
+  background: #F2F2F2;
+}
+
+.thead__first {
+  font-family: "Neo Sans W1G", Optima, sans-serif;
+  font-size: 34px;
+  width: 32%;
+
+}
+
+.thead {
+  font-family: "Neo Sans W1G", Optima, sans-serif;
+  font-size: 22px;
+  position: relative;
+  text-align: center;
+  padding: 5px 5px 10px;
+
+  & span {
+    font-size: 17px;
+  }
+
+}
+
+.thead__hour {
+  width: 16%;
+
+}
+
+.thead__ind {
+  width: 18%;
+
+}
+
+.thead_marry {
+  width: 18%;
+
+}
+
+.thead__allday {
+  width: 16%;
+
+}
+
+.first__td {
+  font-family: "Neo Sans W1G", Optima, sans-serif;
+  font-size: 17px !important;
+  text-align: left !important;
+  color: black !important;
+}
+
