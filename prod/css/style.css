@@ -746,7 +746,7 @@ html, body {
   padding-right: 10%; }
 
 .town__name {
-  font-size: 24px;
+  font-size: 18px;
   text-transform: uppercase;
   color: white; }
 
@@ -783,7 +783,7 @@ html, body {
   text-align: center; }
 
 .form__text {
-  font-size: 24px;
+  font-size: 20px;
   color: white;
   text-align: center;
   margin-bottom: 50px; }
@@ -958,6 +958,17 @@ html, body {
   background: white;
   padding-bottom: 15px; }
 
+.header__chromakey {
+  height: 650px;
+  background: url("../img/chromakey__header.jpg") no-repeat;
+  background-size: cover; }
+
+.header__instaprinter {
+  height: 625px;
+  background: url("../img/instaprinter__header.jpg") no-repeat;
+  background-size: cover;
+  background-position-y: -75px; }
+
 .header__logo {
   width: 25%; }
   .header__logo img {
@@ -1076,6 +1087,36 @@ html, body {
     .handshake__photo {
       height: 70vh;
       background-position-x: 50%; } }
+
+.chromakey__include {
+  text-align: center; }
+  .chromakey__include img {
+    max-width: 100%;
+    height: auto; }
+
+.photozone__scheme2 {
+  text-align: center; }
+  .photozone__scheme2 img {
+    max-width: 100%;
+    height: auto; }
+
+.chromakey__combine {
+  text-align: center; }
+  .chromakey__combine img {
+    max-width: 100%;
+    height: auto; }
+
+.instaprinter__combine, .instaprinter__combine2, .instaprinter__combine3 {
+  text-align: center; }
+  .instaprinter__combine img, .instaprinter__combine2 img, .instaprinter__combine3 img {
+    max-width: 100%;
+    height: auto; }
+
+.girl_flower {
+  text-align: center; }
+  .girl_flower img {
+    max-width: 100%;
+    height: auto; }
 
 .about__order {
   background: #EBECEC;
@@ -1290,48 +1331,10 @@ html, body {
     height: auto; }
 
 .photobooth__price {
-  padding: 20px 7% 40px; }
-
-.photobooth__price-table {
-  width: 100%; }
-  .photobooth__price-table td {
-    text-align: center;
-    color: #D76A43;
-    font-size: 30px; }
-
-.grey {
-  background: #F2F2F2; }
-
-.thead__first {
-  font-family: "Neo Sans W1G", Optima, sans-serif;
-  font-size: 34px;
-  width: 32%; }
-
-.thead {
-  font-family: "Neo Sans W1G", Optima, sans-serif;
-  font-size: 22px;
-  position: relative;
-  text-align: center;
-  padding: 5px 5px 10px; }
-  .thead span {
-    font-size: 17px; }
-
-.thead__hour {
-  width: 16%; }
-
-.thead__ind {
-  width: 18%; }
-
-.thead_marry {
-  width: 18%; }
-
-.thead__allday {
-  width: 16%; }
-
-.first__td {
-  font-family: "Neo Sans W1G", Optima, sans-serif;
-  font-size: 17px !important;
-  text-align: left !important;
-  color: black !important; }
+  padding: 20px 7% 40px;
+  text-align: center; }
+  .photobooth__price img {
+    max-width: 100%;
+    height: auto; }
 
 /*# sourceMappingURL=style.css.map */

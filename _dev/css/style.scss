@@ -42,7 +42,7 @@ html, body {
 
 }
 .town__name {
-  font-size: 24px;
+  font-size: 18px;
   text-transform: uppercase;
   color: white;
 
@@ -78,7 +78,7 @@ html, body {
 }
 
 .form__text {
-  font-size: 24px;
+  font-size: 20px;
   color: white;
   text-align: center;
   margin-bottom: 50px;
@@ -241,6 +241,19 @@ html, body {
   height: 465px;
   background: white;
   padding-bottom: 15px;
+}
+
+.header__chromakey {
+  height: 650px;
+  background: url("../img/chromakey__header.jpg") no-repeat;
+  background-size: cover;
+}
+
+.header__instaprinter {
+  height: 625px;
+  background: url("../img/instaprinter__header.jpg") no-repeat;
+  background-size: cover;
+  background-position-y: -75px;
 }
 
 .header__logo {
@@ -419,13 +432,7 @@ html, body {
     height: auto;
   }
 
-  //height: 635px;
-  //background: url("../img/photobooth__combine1.jpg") no-repeat;
-  //background-size: cover;
-  //
-  //@include tablets {
-  //  height: 70vh;
-  //}
+
 }
 
 .helloween__girls {
@@ -450,6 +457,51 @@ html, body {
     height: 70vh;
     background-position-x: 50%;
 
+  }
+}
+
+.chromakey__include {
+  text-align: center;
+
+  & img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.photozone__scheme2 {
+  text-align: center;
+
+  & img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.chromakey__combine {
+  text-align: center;
+
+  & img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.instaprinter__combine, .instaprinter__combine2, .instaprinter__combine3 {
+  text-align: center;
+
+  & img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.girl_flower {
+  text-align: center;
+
+  & img {
+    max-width: 100%;
+    height: auto;
   }
 }
 
@@ -648,66 +700,13 @@ html, body {
 
 .photobooth__price {
   padding: 20px 7% 40px;
-}
-
-.photobooth__price-table {
-  width: 100%;
-
-  & td {
-    text-align: center;
-    color: #D76A43;
-    font-size: 30px;
-  }
-}
-
-.grey {
-  background: #F2F2F2;
-}
-
-.thead__first {
-  font-family: "Neo Sans W1G", Optima, sans-serif;
-  font-size: 34px;
-  width: 32%;
-
-}
-
-.thead {
-  font-family: "Neo Sans W1G", Optima, sans-serif;
-  font-size: 22px;
-  position: relative;
   text-align: center;
-  padding: 5px 5px 10px;
 
-  & span {
-    font-size: 17px;
+  & img {
+    max-width: 100%;
+    height: auto;
   }
 
 }
 
-.thead__hour {
-  width: 16%;
-
-}
-
-.thead__ind {
-  width: 18%;
-
-}
-
-.thead_marry {
-  width: 18%;
-
-}
-
-.thead__allday {
-  width: 16%;
-
-}
-
-.first__td {
-  font-family: "Neo Sans W1G", Optima, sans-serif;
-  font-size: 17px !important;
-  text-align: left !important;
-  color: black !important;
-}
 
