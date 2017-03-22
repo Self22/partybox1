@@ -256,9 +256,30 @@ html, body {
   background-position-y: -75px;
 }
 
+.header__sharstation {
+  height: 625px;
+  background: url("../img/header__sharstation.jpg") no-repeat;
+  background-size: cover;
+  background-position-y: -75px;
+}
+
+.header__props {
+  height: 635px;
+  background: url("../img/header__props.jpg") no-repeat;
+  background-size: cover;
+  background-position-y: -75px;
+}
+
+.header__more {
+  height: 635px;
+  background: url("../img/header__more.jpg") no-repeat;
+  background-size: cover;
+}
+
+
 .header__logo {
 
-  width: 25%;
+  width: 110px;
 
   & img {
     max-width: 100%;
@@ -347,6 +368,10 @@ html, body {
     & p {
       font-size: 36px;
     }
+  }
+
+  &-more {
+    padding-top: 0;
   }
 }
 
@@ -487,7 +512,7 @@ html, body {
   }
 }
 
-.instaprinter__combine, .instaprinter__combine2, .instaprinter__combine3 {
+.instaprinter__combine, .instaprinter__combine2, .instaprinter__combine3, .sharstation__socials, .props__boot, .album {
   text-align: center;
 
   & img {
@@ -503,6 +528,72 @@ html, body {
     max-width: 100%;
     height: auto;
   }
+}
+
+.photobackgrounds__cont {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0 5%;
+}
+
+.photobackgrounds__item {
+  flex: 24%;
+  margin: 2px;
+  height: 190px;
+
+  @include tablets {
+    flex: 49%;
+  }
+
+  & img {
+    width: 100%;
+    height: 190px;
+  }
+
+  &-red {
+    background: #FF000C;
+  }
+
+  &-pink {
+    background: #FFA6C9;
+  }
+
+  &-bezeviy {
+    background: #FFD2AD;
+  }
+
+  &-yellow {
+    background: #F3D738;
+  }
+
+  &-green {
+    background: #94FFBE;
+  }
+
+}
+
+.branding__photobooths {
+  padding: 0 9% 40px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.branding__photobooth {
+  flex: 20%;
+
+  @include tablets {
+    flex: 50%;
+  }
+
+  @include phones {
+    flex: 100%;
+  }
+
+  & img {
+    max-width: 100%;
+    height: auto;
+  }
+
 }
 
 .about__order {
@@ -696,17 +787,8 @@ html, body {
   }
 }
 
-///////////// photobooth price
+//////////////////////////
 
-.photobooth__price {
-  padding: 20px 7% 40px;
-  text-align: center;
-
-  & img {
-    max-width: 100%;
-    height: auto;
-  }
+.photobackgrounds__item-red {
 
 }
-
-

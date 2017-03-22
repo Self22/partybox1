@@ -969,8 +969,25 @@ html, body {
   background-size: cover;
   background-position-y: -75px; }
 
+.header__sharstation {
+  height: 625px;
+  background: url("../img/header__sharstation.jpg") no-repeat;
+  background-size: cover;
+  background-position-y: -75px; }
+
+.header__props {
+  height: 635px;
+  background: url("../img/header__props.jpg") no-repeat;
+  background-size: cover;
+  background-position-y: -75px; }
+
+.header__more {
+  height: 635px;
+  background: url("../img/header__more.jpg") no-repeat;
+  background-size: cover; }
+
 .header__logo {
-  width: 25%; }
+  width: 110px; }
   .header__logo img {
     max-width: 100%;
     height: auto; }
@@ -1036,6 +1053,8 @@ html, body {
     text-align: center; }
     .text__section-big p {
       font-size: 36px; }
+  .text__section-more {
+    padding-top: 0; }
 
 .glasses__girls {
   height: 725px;
@@ -1106,15 +1125,78 @@ html, body {
     max-width: 100%;
     height: auto; }
 
-.instaprinter__combine, .instaprinter__combine2, .instaprinter__combine3 {
+.instaprinter__combine, .instaprinter__combine2, .instaprinter__combine3, .sharstation__socials, .props__boot, .album {
   text-align: center; }
-  .instaprinter__combine img, .instaprinter__combine2 img, .instaprinter__combine3 img {
+  .instaprinter__combine img, .instaprinter__combine2 img, .instaprinter__combine3 img, .sharstation__socials img, .props__boot img, .album img {
     max-width: 100%;
     height: auto; }
 
 .girl_flower {
   text-align: center; }
   .girl_flower img {
+    max-width: 100%;
+    height: auto; }
+
+.photobackgrounds__cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  padding: 0 5%; }
+
+.photobackgrounds__item {
+  -webkit-box-flex: 24%;
+      -ms-flex: 24%;
+          flex: 24%;
+  margin: 2px;
+  height: 190px; }
+  @media screen and (max-width: 768px) {
+    .photobackgrounds__item {
+      -webkit-box-flex: 49%;
+          -ms-flex: 49%;
+              flex: 49%; } }
+  .photobackgrounds__item img {
+    width: 100%;
+    height: 190px; }
+  .photobackgrounds__item-red {
+    background: #FF000C; }
+  .photobackgrounds__item-pink {
+    background: #FFA6C9; }
+  .photobackgrounds__item-bezeviy {
+    background: #FFD2AD; }
+  .photobackgrounds__item-yellow {
+    background: #F3D738; }
+  .photobackgrounds__item-green {
+    background: #94FFBE; }
+
+.branding__photobooths {
+  padding: 0 9% 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap; }
+
+.branding__photobooth {
+  -webkit-box-flex: 20%;
+      -ms-flex: 20%;
+          flex: 20%; }
+  @media screen and (max-width: 768px) {
+    .branding__photobooth {
+      -webkit-box-flex: 50%;
+          -ms-flex: 50%;
+              flex: 50%; } }
+  @media screen and (max-width: 480px) {
+    .branding__photobooth {
+      -webkit-box-flex: 100%;
+          -ms-flex: 100%;
+              flex: 100%; } }
+  .branding__photobooth img {
     max-width: 100%;
     height: auto; }
 
@@ -1327,13 +1409,6 @@ html, body {
           flex-direction: row;
   padding: 10px 15% 50px; }
   .photoboxes img {
-    max-width: 100%;
-    height: auto; }
-
-.photobooth__price {
-  padding: 20px 7% 40px;
-  text-align: center; }
-  .photobooth__price img {
     max-width: 100%;
     height: auto; }
 
