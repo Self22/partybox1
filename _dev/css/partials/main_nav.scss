@@ -8,6 +8,10 @@
   flex-flow: row nowrap;
   justify-content: space-around;
   align-items: center;
+
+  @include phones {
+    display: none;
+  }
 }
 
 .menu__item {
@@ -134,6 +138,7 @@
 }
 
 .order__button {
+  text-align: center;
   border: none;
   cursor: pointer;
   font-family: 'NeoSansW1G-Bold', Optima, sans-serif;;
@@ -207,4 +212,127 @@
 
 .dropdown__active {
   background: white !important;
+}
+
+///////////////////////////////////
+
+.mobile__header, .mobile__menu-header {
+  position: relative;
+  height: 70px;
+  background: white;
+  display: none;
+  margin-bottom: auto;
+  width: 100%;
+
+  @include phones {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.mobile__header-logo {
+  flex: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & img {
+    width: 65%;
+    height: auto;
+  }
+
+}
+
+.mobile__nav-button {
+  flex: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & span {
+    font-size: 40px;
+  }
+
+}
+
+.mobile__menu {
+  display: none;
+  background: white;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 4;
+  text-align: center;
+
+  & .mobile__nav-button span {
+    font-size: 70px;
+    margin-bottom: 10px;
+  }
+}
+
+.mobile__menu-list, .mobile__menu-item {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.mobile__menu-list {
+  padding: 40px 0 55px;
+}
+
+.mobile__menu-item {
+  height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 12%;
+}
+
+.mobile__menu-item-active {
+  background: #FFA500;
+}
+
+.mobile__menu-link {
+  text-decoration: none !important;
+  font-family: 'NeoSansW1G-Bold', Optima, sans-serif;
+  font-size: 16px;
+  color: black;
+
+  &-services {
+
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+
+      border-top: 5px solid black;
+      border-right: 5px solid transparent;
+      border-left: 5px solid transparent;
+      right: -25px;
+      bottom: 7px;
+    }
+
+  }
+
+}
+
+.dropdown__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+.mobile__menu-item-dropdown {
+  padding-left: 25px;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
 }

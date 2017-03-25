@@ -3,6 +3,7 @@
  * 1. Change the default font family in all browsers (opinionated).
  * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
+@import url(../fonts/font-awesome.css);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -390,6 +391,9 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  @media screen and (max-width: 480px) {
+    .main__menu {
+      display: none; } }
 
 .menu__item {
   height: 45px; }
@@ -531,6 +535,7 @@ textarea {
           align-items: center; }
 
 .order__button {
+  text-align: center;
   border: none;
   cursor: pointer;
   font-family: 'NeoSansW1G-Bold', Optima, sans-serif;
@@ -596,6 +601,124 @@ textarea {
 
 .dropdown__active {
   background: white !important; }
+
+.mobile__header, .mobile__menu-header {
+  position: relative;
+  height: 70px;
+  background: white;
+  display: none;
+  margin-bottom: auto;
+  width: 100%; }
+  @media screen and (max-width: 480px) {
+    .mobile__header, .mobile__menu-header {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; } }
+
+.mobile__header-logo {
+  -webkit-box-flex: 80%;
+      -ms-flex: 80%;
+          flex: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .mobile__header-logo img {
+    width: 65%;
+    height: auto; }
+
+.mobile__nav-button {
+  -webkit-box-flex: 20%;
+      -ms-flex: 20%;
+          flex: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .mobile__nav-button span {
+    font-size: 40px; }
+
+.mobile__menu {
+  display: none;
+  background: white;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 4;
+  text-align: center; }
+  .mobile__menu .mobile__nav-button span {
+    font-size: 70px;
+    margin-bottom: 10px; }
+
+.mobile__menu-list, .mobile__menu-item {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: left; }
+
+.mobile__menu-list {
+  padding: 40px 0 55px; }
+
+.mobile__menu-item {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 12%; }
+
+.mobile__menu-item-active {
+  background: #FFA500; }
+
+.mobile__menu-link {
+  text-decoration: none !important;
+  font-family: 'NeoSansW1G-Bold', Optima, sans-serif;
+  font-size: 16px;
+  color: black; }
+  .mobile__menu-link-services {
+    position: relative; }
+    .mobile__menu-link-services::after {
+      content: '';
+      position: absolute;
+      border-top: 5px solid black;
+      border-right: 5px solid transparent;
+      border-left: 5px solid transparent;
+      right: -25px;
+      bottom: 7px; }
+
+.dropdown__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none; }
+
+.mobile__menu-item-dropdown {
+  padding-left: 25px; }
+
+.show {
+  display: block; }
+
+.hide {
+  display: none; }
 
 /* Pulse Grow */
 @-webkit-keyframes hvr-pulse-grow {
@@ -744,29 +867,44 @@ html, body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-right: 10%; }
+  @media screen and (max-width: 480px) {
+    .footer__town {
+      padding-right: 0; } }
 
 .town__name {
   font-size: 18px;
   text-transform: uppercase;
   color: white; }
+  @media screen and (max-width: 480px) {
+    .town__name {
+      font-size: 14px; } }
 
 .points {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   color: white; }
+  @media screen and (max-width: 480px) {
+    .points {
+      display: none; } }
 
 .town__tel {
-  font-size: 24px;
+  font-size: 18px;
   text-decoration: none !important;
   color: white; }
+  @media screen and (max-width: 480px) {
+    .town__tel {
+      font-size: 14px; } }
 
 .footer__mail {
   font-size: 24px;
-  text-decoration: none !important;
   text-transform: uppercase; }
   .footer__mail a {
-    color: white !important; }
+    color: white !important;
+    text-decoration: none !important; }
+  @media screen and (max-width: 480px) {
+    .footer__mail {
+      font-size: 14px; } }
 
 .yellow__footer-form {
   display: -webkit-box;
@@ -797,6 +935,10 @@ html, body {
   border: none;
   border-radius: 20px;
   font-size: 24px; }
+  @media screen and (max-width: 480px) {
+    .form__input {
+      width: 100%;
+      font-size: 18px; } }
 
 .form__button {
   width: 75%;
@@ -806,6 +948,10 @@ html, body {
   border-radius: 20px;
   font-size: 24px;
   color: white; }
+  @media screen and (max-width: 480px) {
+    .form__button {
+      width: 100%;
+      font-size: 20px; } }
 
 .envelope {
   margin-right: 7%; }
@@ -842,6 +988,9 @@ html, body {
   -webkit-box-flex: 180;
       -ms-flex: 180;
           flex: 180; }
+  @media screen and (max-width: 480px) {
+    .footer__nav-left {
+      padding-right: 25px; } }
 
 .footer__nav-right {
   -webkit-box-flex: 420;
@@ -986,18 +1135,31 @@ html, body {
   background: url("../img/header__more.jpg") no-repeat;
   background-size: cover; }
 
+.header__contacts {
+  height: 280px; }
+  .header__contacts h1, .header__contacts p {
+    color: black; }
+
 .header__logo {
-  width: 110px; }
+  width: 310px; }
+  @media screen and (max-width: 480px) {
+    .header__logo {
+      width: 240px; } }
   .header__logo img {
     max-width: 100%;
     height: auto; }
 
 .header__text {
+  text-align: center;
   font-size: 24px;
   font-family: "Neo Sans W1G", Optima, sans-serif;
   color: white; }
   .header__text-franshize {
-    color: black; }
+    color: black;
+    text-align: center; }
+  @media screen and (max-width: 480px) {
+    .header__text {
+      font-size: 20px; } }
 
 .header__order-button {
   font-family: 'NeoSansW1G-Bold', Optima, sans-serif;
@@ -1010,8 +1172,13 @@ html, body {
   color: white;
   margin-bottom: 50px;
   cursor: pointer; }
+  @media screen and (max-width: 480px) {
+    .header__order-button {
+      width: 80%;
+      padding: 15px 1%; } }
 
 .main__slogan {
+  text-align: center;
   text-transform: uppercase;
   padding: 0;
   margin: 0;
@@ -1025,6 +1192,10 @@ html, body {
     color: black;
     font-size: 70px;
     margin-bottom: 5px; }
+  @media screen and (max-width: 480px) {
+    .main__slogan {
+      font-size: 30px;
+      margin-top: 20px; } }
 
 .header__slogan-index {
   text-transform: uppercase;
@@ -1033,7 +1204,11 @@ html, body {
   font-family: 'NeoSansW1G-Bold', Optima, sans-serif;
   font-size: 40px;
   color: white;
-  margin-bottom: 25px; }
+  margin-bottom: 25px;
+  text-align: center; }
+  @media screen and (max-width: 480px) {
+    .header__slogan-index {
+      font-size: 22px; } }
 
 .text__section {
   padding: 25px 14% 25px;
@@ -1125,9 +1300,9 @@ html, body {
     max-width: 100%;
     height: auto; }
 
-.instaprinter__combine, .instaprinter__combine2, .instaprinter__combine3, .sharstation__socials, .props__boot, .album {
+.instaprinter__combine, .instaprinter__combine2, .instaprinter__combine3, .sharstation__socials, .props__boot, .album, .photobooth__price {
   text-align: center; }
-  .instaprinter__combine img, .instaprinter__combine2 img, .instaprinter__combine3 img, .sharstation__socials img, .props__boot img, .album img {
+  .instaprinter__combine img, .instaprinter__combine2 img, .instaprinter__combine3 img, .sharstation__socials img, .props__boot img, .album img, .photobooth__price img {
     max-width: 100%;
     height: auto; }
 
@@ -1376,6 +1551,11 @@ html, body {
   -webkit-box-flex: 16%;
       -ms-flex: 16%;
           flex: 16%; }
+  @media screen and (max-width: 480px) {
+    .joy__img-cont {
+      -webkit-box-flex: 33%;
+          -ms-flex: 33%;
+              flex: 33%; } }
   .joy__img-cont img {
     max-width: 75%;
     height: auto; }

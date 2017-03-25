@@ -3,6 +3,8 @@
 @import "_misc/normalize";
 //fonts
 @import "fonts";
+@import "../fonts/font-awesome.css";
+
 //partials
 @import "partials/footer";
 @import "partials/main_nav";
@@ -40,33 +42,55 @@ html, body {
   justify-content: space-between;
   padding-right: 10%;
 
+  @include phones {
+    padding-right: 0;
+  }
+
 }
 .town__name {
   font-size: 18px;
   text-transform: uppercase;
   color: white;
 
+  @include phones {
+    font-size: 14px;
+  }
+
 }
 .points {
   align-self: center;
   color: white;
+
+  @include phones {
+    display: none;
+  }
 }
 .town__tel {
-  font-size: 24px;
+  font-size: 18px;
   text-decoration: none !important;
   color: white;
 
+  @include phones {
+    font-size: 14px;
+  }
+
 }
+
 .footer__mail {
   font-size: 24px;
-  text-decoration: none !important;
   text-transform: uppercase;
 
   & a{
     color: white !important;
+    text-decoration: none !important;
+  }
+
+  @include phones {
+    font-size: 14px;
   }
 
 }
+
 .yellow__footer-form {
   display: flex;
   flex-direction: column;
@@ -95,6 +119,11 @@ html, body {
   border: none;
   border-radius: 20px;
   font-size: 24px;
+
+  @include phones {
+    width: 100%;
+    font-size: 18px;
+  }
 }
 
 .form__button {
@@ -105,6 +134,12 @@ html, body {
   border-radius: 20px;
   font-size: 24px;
   color: white;
+
+  @include phones {
+    width: 100%;
+    font-size: 20px;
+  }
+
 }
 
 .envelope {
@@ -143,6 +178,10 @@ html, body {
 
 .footer__nav-left {
   flex: 180;
+
+  @include phones {
+    padding-right: 25px;
+  }
 }
 
 .footer__nav-right {
@@ -276,10 +315,22 @@ html, body {
   background-size: cover;
 }
 
+.header__contacts {
+  height: 280px;
+
+  & h1, p {
+    color: black;
+  }
+}
+
 
 .header__logo {
 
-  width: 110px;
+  width: 310px;
+
+  @include phones {
+    width: 240px;
+  }
 
   & img {
     max-width: 100%;
@@ -288,12 +339,18 @@ html, body {
 }
 
 .header__text {
+  text-align: center;
   font-size: 24px;
   font-family: "Neo Sans W1G", Optima, sans-serif;
   color: white;
 
   &-franshize {
     color: black;
+    text-align: center;
+  }
+
+  @include phones {
+    font-size: 20px;
   }
 
 }
@@ -309,9 +366,16 @@ html, body {
   color: white;
   margin-bottom: 50px;
   cursor: pointer;
+
+  @include phones {
+    width: 80%;
+    padding: 15px 1%;
+  }
+
 }
 
 .main__slogan {
+  text-align: center;
   text-transform: uppercase;
   padding: 0;
   margin: 0;
@@ -329,6 +393,11 @@ html, body {
     font-size: 70px;
     margin-bottom: 5px;
   }
+
+  @include phones {
+    font-size: 30px;
+    margin-top: 20px;
+  }
 }
 
 .header__slogan-index {
@@ -339,6 +408,11 @@ html, body {
   font-size: 40px;
   color: white;
   margin-bottom: 25px;
+  text-align: center;
+
+  @include phones {
+    font-size: 22px;
+  }
 }
 
 .text__section {
@@ -512,7 +586,7 @@ html, body {
   }
 }
 
-.instaprinter__combine, .instaprinter__combine2, .instaprinter__combine3, .sharstation__socials, .props__boot, .album {
+.instaprinter__combine, .instaprinter__combine2, .instaprinter__combine3, .sharstation__socials, .props__boot, .album, .photobooth__price {
   text-align: center;
 
   & img {
@@ -744,6 +818,10 @@ html, body {
 
 .joy__img-cont {
   flex: 16%;
+
+  @include phones {
+    flex: 33%;
+  }
 
   & img {
     max-width: 75%;
