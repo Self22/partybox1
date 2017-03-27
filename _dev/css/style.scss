@@ -17,7 +17,7 @@
 
 html, body {
   min-height: 100%;
-  font-family: 'NeoSansW1G';
+  font-family: 'NeoSansW1G', Optima, sans-serif;;
   width: 100%;
   line-height: 1.42;
   position: relative;
@@ -95,6 +95,11 @@ html, body {
   display: flex;
   flex-direction: column;
   align-content: center;
+
+  @include tablets {
+    margin-top: 30px;
+  }
+
 }
 
 .form__field {
@@ -115,10 +120,11 @@ html, body {
 
 .form__input {
   width: 75%;
-  padding: 7px 0 7px 24%;
+  padding: 7px 0 7px 0;
   border: none;
   border-radius: 20px;
   font-size: 24px;
+  text-align: center;
 
   @include phones {
     width: 100%;
@@ -126,10 +132,17 @@ html, body {
   }
 }
 
+.footer__tel-input {
+  width: 100% !important;
+  margin: 0 !important;
+}
+
 .form__button {
+  text-align: center;
+  cursor: pointer;
   width: 75%;
   background: red;
-  padding: 7px 26%;
+  padding: 7px;
   border: none;
   border-radius: 20px;
   font-size: 24px;
@@ -245,7 +258,7 @@ html, body {
   align-items: center;
 
   @include tablets {
-    height: 70vh;
+    height: 100vh;
   }
 
 }
@@ -267,6 +280,10 @@ html, body {
   background: url("../img/header_about.jpg") no-repeat;
   background-size: cover;
   background-position-y: -90px;
+
+  @include tablets {
+    background-position-y: 0;
+  }
 
 }
 
@@ -325,7 +342,7 @@ html, body {
 
 
 .header__logo {
-
+  margin-bottom: 40px;
   width: 310px;
 
   @include phones {
@@ -340,9 +357,10 @@ html, body {
 
 .header__text {
   text-align: center;
-  font-size: 24px;
+  font-size: 30px;
   font-family: "Neo Sans W1G", Optima, sans-serif;
   color: white;
+  margin-bottom: 50px;
 
   &-franshize {
     color: black;
@@ -356,18 +374,20 @@ html, body {
 }
 
 .header__order-button {
-  font-family: 'NeoSansW1G-Bold', Optima, sans-serif;
-  font-size: 24px;
+  font-family: "Neo Sans W1G", Optima, sans-serif;;
+  font-size: 22px;
   background: #FB5500;
   padding: 15px 105px;
-  border-radius: 30px;
+  border-radius: 37px;
   border: none;
   text-transform: uppercase;
   color: white;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   cursor: pointer;
+  letter-spacing: 1px;
 
   @include phones {
+    font-size: 16px;
     width: 80%;
     padding: 15px 1%;
   }
@@ -382,7 +402,7 @@ html, body {
   font-family: 'NeoSansW1G-Bold', Optima, sans-serif;
   font-size: 70px;
   color: white;
-  margin-bottom: 45px;
+  margin-bottom: 10px;
 
   &-about {
     margin-bottom: 0;
@@ -392,6 +412,15 @@ html, body {
     color: black;
     font-size: 70px;
     margin-bottom: 5px;
+
+    @include tablets {
+      font-size: 42px;
+    }
+  }
+
+  @include tablets {
+    font-size: 42px;
+    margin-bottom: 60px;
   }
 
   @include phones {
@@ -773,9 +802,6 @@ html, body {
     flex: 50%;
   }
 
-  @include phones {
-    flex: 100%;
-  }
 }
 
 .logo__slider {
@@ -865,8 +891,209 @@ html, body {
   }
 }
 
-//////////////////////////
+////////////////////////// popup
 
-.photobackgrounds__item-red {
+.popup__order {
+  position: relative;
+  display: none;
+  z-index: 5;
+}
 
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup__form-order {
+  position: fixed;
+  width: 60%;
+  height: 490px;
+  background: white;
+  border-radius: 15px;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  @include desktop {
+    height: 550px;
+  }
+
+  @include phones {
+    height: 100vh;
+    width: 90%;
+  }
+
+}
+
+.popup__title {
+  text-transform: uppercase;
+  font-family: "Neo Sans W1G", Optima, sans-serif;
+  font-size: 50px;
+  flex: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  padding-bottom: 0;
+
+  @include desktop {
+    font-size: 40px;
+  }
+
+  @include tablets {
+    font-size: 26px;
+  }
+
+  @include phones {
+    flex: 230;
+  }
+
+}
+
+.popup__h2 {
+  flex: 100;
+  font-family: "Neo Sans W1G", Optima, sans-serif;
+  font-size: 24px;
+}
+
+.popup__text {
+  flex: 100;
+  font-family: "Neo Sans W1G", Optima, sans-serif;
+  font-size: 16px;
+  width: 50%;
+  text-align: center;
+
+  @include phones {
+    width: 90%;
+  }
+
+}
+
+.popupform-order {
+  flex: 200;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 35px 0;
+
+  @include tablets {
+    flex: 410;
+  }
+}
+
+.popupform__order-name {
+}
+
+.order__name-input {
+  font-family: "Neo Sans W1G", Optima, sans-serif;
+  font-size: 22px;
+  padding: 12px;
+  border-radius: 33px;
+  border: 1px solid;
+  text-align: center;
+  width: 100%;
+
+  @include desktop {
+    font-size: 20px;
+  }
+
+}
+
+.order__tel-input {
+  font-family: "Neo Sans W1G", Optima, sans-serif;
+  font-size: 24px;
+  padding: 12px;
+  border-radius: 33px;
+  border: 1px solid;
+  text-align: center;
+  width: 100%;
+
+  @include desktop {
+    font-size: 20px;
+  }
+
+}
+
+.form__label {
+
+}
+
+.form__button {
+
+}
+
+.form__button-popup {
+  width: 50%;
+  text-align: center;
+  padding: 16px 0;
+  font-size: 22px;
+  border-radius: 33px;
+  background: #FB5500;
+
+  @include tablets {
+    margin-top: 10px;
+    width: 90%;
+  }
+}
+
+.popupform__order-name {
+
+}
+
+.close__popup {
+  cursor: pointer;
+  position: absolute;
+  font-size: 45px;
+  top: 0;
+  right: 3%;
+}
+
+.show {
+  display: block;
+}
+
+.form-group {
+  margin: 0 2%;
+  margin-bottom: 15px;
+  width: 45%;
+  text-align: center;
+
+  @include tablets {
+    width: 90%;
+    margin-bottom: 0;
+  }
+
+}
+
+::-webkit-input-placeholder {
+  color: #D4D3D3;
+}
+
+::-moz-placeholder {
+  color: #D4D3D3;
+}
+
+/* Firefox 19+ */
+:-moz-placeholder {
+  color: #D4D3D3;
+}
+
+/* Firefox 18- */
+:-ms-input-placeholder {
+  color: #D4D3D3;
 }

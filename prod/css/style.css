@@ -391,7 +391,7 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     .main__menu {
       display: none; } }
 
@@ -466,7 +466,7 @@ textarea {
     border-top: 5px solid black;
     border-right: 5px solid transparent;
     border-left: 5px solid transparent;
-    right: 40px; }
+    right: 18%; }
 
 .dropdown__services {
   display: none;
@@ -483,11 +483,14 @@ textarea {
     padding: 0; }
   .dropdown__services a {
     display: block;
-    padding: 18px 18px;
+    padding: 15px 18px;
     background: #FBD615; }
     .dropdown__services a:hover {
       background: white;
       color: black; }
+
+.menu-item-servises:hover {
+  background: transparent; }
 
 .menu-item-servises:hover .dropdown__services {
   display: block; }
@@ -554,6 +557,9 @@ textarea {
     display: block;
     margin: 0 auto;
     margin-bottom: 40px; }
+  @media screen and (max-width: 480px) {
+    .order__button {
+      font-size: 12px; } }
 
 .menu-item-lg {
   -webkit-box-flex: 70;
@@ -570,14 +576,15 @@ textarea {
           align-items: center;
   margin-left: 2%;
   margin-right: 2%;
-  position: relative; }
+  position: relative;
+  padding-right: 7px; }
   .menu-item-lg::after {
     content: '';
     position: absolute;
     border-top: 5px solid black;
     border-right: 5px solid transparent;
     border-left: 5px solid transparent;
-    right: 11px; }
+    right: 7%; }
 
 .dropdown__lg {
   display: none;
@@ -591,7 +598,8 @@ textarea {
   height: 45px;
   padding-top: 9px;
   width: 100%;
-  padding-left: 35%; }
+  padding-left: 35%;
+  left: 0; }
   .dropdown__lg:hover {
     background: white;
     color: black; }
@@ -609,7 +617,7 @@ textarea {
   display: none;
   margin-bottom: auto;
   width: 100%; }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     .mobile__header, .mobile__menu-header {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -633,8 +641,13 @@ textarea {
       -ms-flex-align: center;
           align-items: center; }
   .mobile__header-logo img {
-    width: 65%;
     height: auto; }
+    @media screen and (max-width: 768px) {
+      .mobile__header-logo img {
+        width: 33%; } }
+    @media screen and (max-width: 480px) {
+      .mobile__header-logo img {
+        width: 65%; } }
 
 .mobile__nav-button {
   -webkit-box-flex: 20%;
@@ -712,7 +725,7 @@ textarea {
   display: none; }
 
 .mobile__menu-item-dropdown {
-  padding-left: 25px; }
+  padding-left: 15%; }
 
 .show {
   display: block; }
@@ -837,7 +850,7 @@ textarea {
 
 html, body {
   min-height: 100%;
-  font-family: 'NeoSansW1G';
+  font-family: 'NeoSansW1G', Optima, sans-serif;
   width: 100%;
   line-height: 1.42;
   position: relative; }
@@ -916,6 +929,9 @@ html, body {
           flex-direction: column;
   -ms-flex-line-pack: center;
       align-content: center; }
+  @media screen and (max-width: 768px) {
+    .yellow__footer-form {
+      margin-top: 30px; } }
 
 .form__field {
   text-align: center; }
@@ -931,19 +947,26 @@ html, body {
 
 .form__input {
   width: 75%;
-  padding: 7px 0 7px 24%;
+  padding: 7px 0 7px 0;
   border: none;
   border-radius: 20px;
-  font-size: 24px; }
+  font-size: 24px;
+  text-align: center; }
   @media screen and (max-width: 480px) {
     .form__input {
       width: 100%;
       font-size: 18px; } }
 
+.footer__tel-input {
+  width: 100% !important;
+  margin: 0 !important; }
+
 .form__button {
+  text-align: center;
+  cursor: pointer;
   width: 75%;
   background: red;
-  padding: 7px 26%;
+  padding: 7px;
   border: none;
   border-radius: 20px;
   font-size: 24px;
@@ -1081,7 +1104,7 @@ html, body {
           align-items: center; }
   @media screen and (max-width: 768px) {
     .header {
-      height: 70vh; } }
+      height: 100vh; } }
 
 .header__index {
   background: url("../img/header_index.jpg") no-repeat;
@@ -1096,6 +1119,9 @@ html, body {
   background: url("../img/header_about.jpg") no-repeat;
   background-size: cover;
   background-position-y: -90px; }
+  @media screen and (max-width: 768px) {
+    .header__about {
+      background-position-y: 0; } }
 
 .header__photobooth {
   height: 645px;
@@ -1141,6 +1167,7 @@ html, body {
     color: black; }
 
 .header__logo {
+  margin-bottom: 40px;
   width: 310px; }
   @media screen and (max-width: 480px) {
     .header__logo {
@@ -1151,9 +1178,10 @@ html, body {
 
 .header__text {
   text-align: center;
-  font-size: 24px;
+  font-size: 30px;
   font-family: "Neo Sans W1G", Optima, sans-serif;
-  color: white; }
+  color: white;
+  margin-bottom: 50px; }
   .header__text-franshize {
     color: black;
     text-align: center; }
@@ -1162,18 +1190,20 @@ html, body {
       font-size: 20px; } }
 
 .header__order-button {
-  font-family: 'NeoSansW1G-Bold', Optima, sans-serif;
-  font-size: 24px;
+  font-family: "Neo Sans W1G", Optima, sans-serif;
+  font-size: 22px;
   background: #FB5500;
   padding: 15px 105px;
-  border-radius: 30px;
+  border-radius: 37px;
   border: none;
   text-transform: uppercase;
   color: white;
-  margin-bottom: 50px;
-  cursor: pointer; }
+  margin-bottom: 40px;
+  cursor: pointer;
+  letter-spacing: 1px; }
   @media screen and (max-width: 480px) {
     .header__order-button {
+      font-size: 16px;
       width: 80%;
       padding: 15px 1%; } }
 
@@ -1185,13 +1215,20 @@ html, body {
   font-family: 'NeoSansW1G-Bold', Optima, sans-serif;
   font-size: 70px;
   color: white;
-  margin-bottom: 45px; }
+  margin-bottom: 10px; }
   .main__slogan-about {
     margin-bottom: 0; }
   .main__slogan-franshize {
     color: black;
     font-size: 70px;
     margin-bottom: 5px; }
+    @media screen and (max-width: 768px) {
+      .main__slogan-franshize {
+        font-size: 42px; } }
+  @media screen and (max-width: 768px) {
+    .main__slogan {
+      font-size: 42px;
+      margin-bottom: 60px; } }
   @media screen and (max-width: 480px) {
     .main__slogan {
       font-size: 30px;
@@ -1499,11 +1536,6 @@ html, body {
       -webkit-box-flex: 50%;
           -ms-flex: 50%;
               flex: 50%; } }
-  @media screen and (max-width: 480px) {
-    .logo__cont {
-      -webkit-box-flex: 100%;
-          -ms-flex: 100%;
-              flex: 100%; } }
 
 .logo__slider {
   height: 390px;
@@ -1591,5 +1623,201 @@ html, body {
   .photoboxes img {
     max-width: 100%;
     height: auto; }
+
+.popup__order {
+  position: relative;
+  display: none;
+  z-index: 5; }
+
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.popup__form-order {
+  position: fixed;
+  width: 60%;
+  height: 490px;
+  background: white;
+  border-radius: 15px;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media screen and (max-width: 1200px) {
+    .popup__form-order {
+      height: 550px; } }
+  @media screen and (max-width: 480px) {
+    .popup__form-order {
+      height: 100vh;
+      width: 90%; } }
+
+.popup__title {
+  text-transform: uppercase;
+  font-family: "Neo Sans W1G", Optima, sans-serif;
+  font-size: 50px;
+  -webkit-box-flex: 100;
+      -ms-flex: 100;
+          flex: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 20px;
+  padding-bottom: 0; }
+  @media screen and (max-width: 1200px) {
+    .popup__title {
+      font-size: 40px; } }
+  @media screen and (max-width: 768px) {
+    .popup__title {
+      font-size: 26px; } }
+  @media screen and (max-width: 480px) {
+    .popup__title {
+      -webkit-box-flex: 230;
+          -ms-flex: 230;
+              flex: 230; } }
+
+.popup__h2 {
+  -webkit-box-flex: 100;
+      -ms-flex: 100;
+          flex: 100;
+  font-family: "Neo Sans W1G", Optima, sans-serif;
+  font-size: 24px; }
+
+.popup__text {
+  -webkit-box-flex: 100;
+      -ms-flex: 100;
+          flex: 100;
+  font-family: "Neo Sans W1G", Optima, sans-serif;
+  font-size: 16px;
+  width: 50%;
+  text-align: center; }
+  @media screen and (max-width: 480px) {
+    .popup__text {
+      width: 90%; } }
+
+.popupform-order {
+  -webkit-box-flex: 200;
+      -ms-flex: 200;
+          flex: 200;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 35px 0; }
+  @media screen and (max-width: 768px) {
+    .popupform-order {
+      -webkit-box-flex: 410;
+          -ms-flex: 410;
+              flex: 410; } }
+
+.order__name-input {
+  font-family: "Neo Sans W1G", Optima, sans-serif;
+  font-size: 22px;
+  padding: 12px;
+  border-radius: 33px;
+  border: 1px solid;
+  text-align: center;
+  width: 100%; }
+  @media screen and (max-width: 1200px) {
+    .order__name-input {
+      font-size: 20px; } }
+
+.order__tel-input {
+  font-family: "Neo Sans W1G", Optima, sans-serif;
+  font-size: 24px;
+  padding: 12px;
+  border-radius: 33px;
+  border: 1px solid;
+  text-align: center;
+  width: 100%; }
+  @media screen and (max-width: 1200px) {
+    .order__tel-input {
+      font-size: 20px; } }
+
+.form__button-popup {
+  width: 50%;
+  text-align: center;
+  padding: 16px 0;
+  font-size: 22px;
+  border-radius: 33px;
+  background: #FB5500; }
+  @media screen and (max-width: 768px) {
+    .form__button-popup {
+      margin-top: 10px;
+      width: 90%; } }
+
+.close__popup {
+  cursor: pointer;
+  position: absolute;
+  font-size: 45px;
+  top: 0;
+  right: 3%; }
+
+.show {
+  display: block; }
+
+.form-group {
+  margin: 0 2%;
+  margin-bottom: 15px;
+  width: 45%;
+  text-align: center; }
+  @media screen and (max-width: 768px) {
+    .form-group {
+      width: 90%;
+      margin-bottom: 0; } }
+
+::-webkit-input-placeholder {
+  color: #D4D3D3; }
+
+::-moz-placeholder {
+  color: #D4D3D3; }
+
+/* Firefox 19+ */
+:-moz-placeholder {
+  color: #D4D3D3; }
+
+/* Firefox 18- */
+:-ms-input-placeholder {
+  color: #D4D3D3; }
 
 /*# sourceMappingURL=style.css.map */

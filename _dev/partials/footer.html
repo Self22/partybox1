@@ -30,17 +30,23 @@
                         на обратный звонок и наш менеджер
                         перезвонит Вам!
                     </div>
-                    <form class="form__field" action="">
-                        <div>
-                            <label class="form__label">
-                                <input class="form__input" type="text" size="10" placeholder="0ХХ ХХХ ХХ ХХ">
-                            </label>
+                    <form id="footerform" class="form__field">
+                        <div class="form-group footer__tel-input">
+                            <label for="tel"></label>
+                            <input type="text" name="tel" class="form__input" id="tel" placeholder="0ХХ ХХХ ХХ ХХ">
                         </div>
-                        <div>
-                            <label class="form__label">
-                                <input class="form__button" type="submit" value="ОТПРАВИТЬ">
-                            </label>
-                        </div>
+                        <label for="popup__order-btn" class="form__label"></label>
+                        <input class="form__button" type="submit" value="ОТПРАВИТЬ" id="popup__order-btn">
+                        <!--<div class="form-group">-->
+                        <!--<label class="form__label">-->
+                        <!--<input class="form__input" type="text" size="10" name="tel"  placeholder="0ХХ ХХХ ХХ ХХ">-->
+                        <!--</label>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                        <!--<label class="form__label">-->
+                        <!--<input class="form__button" type="submit" value="ОТПРАВИТЬ" id="popup__order-btn">-->
+                        <!--</label>-->
+                        <!--</div>-->
                     </form>
 
                 </div>
@@ -98,5 +104,6 @@
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/jquery.bxslider.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
 <script src="js/main.js"></script>
 </html>
