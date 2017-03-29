@@ -23,7 +23,11 @@ html, body {
   position: relative;
 }
 
+* {
+  outline: 0 !important
+}
 
+;
 
 
 .yellow__footer{
@@ -77,6 +81,7 @@ html, body {
 }
 
 .footer__mail {
+  margin-top: 20px;
   font-size: 24px;
   text-transform: uppercase;
 
@@ -110,7 +115,7 @@ html, body {
   font-size: 20px;
   color: white;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 43px;
 
 }
 
@@ -265,71 +270,107 @@ html, body {
 
 .header__index {
 
-  background: url("../img/header_index.jpg") no-repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url("../img/header_index.jpg") no-repeat;
+  background-position-y: 45%;
   background-size: cover;
-  background-position-y: -70px;
+
 
   @include desktop {
     background-position-y: 0;
     background-position-x: 50%;
   }
 
-}
-
-.header__about {
-  background: url("../img/header_about.jpg") no-repeat;
-  background-size: cover;
-  background-position-y: -90px;
-
   @include tablets {
-    background-position-y: 0;
+    background-size: auto 100%;
   }
 
 }
 
+.header__about {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url("../img/header_about.jpg") no-repeat;
+  background-size: cover;
+  background-position-y: 20%;
+
+  @include tablets {
+    height: 100vh;
+    background-size: auto 100%;
+  }
+}
+
 .header__photobooth {
   height: 645px;
-  background: url("../img/photobooth__header.jpg") no-repeat;
+  position: relative;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url("../img/photobooth__header.jpg") no-repeat;
   background-size: cover;
+
+  @include tablets {
+    height: 100vh;
+    background-size: auto 100%;
+  }
 }
 
 .header__franshize {
   height: 465px;
   background: white;
   padding-bottom: 15px;
+
+  @include phones {
+    height: 610px;
+  }
 }
 
 .header__chromakey {
   height: 650px;
-  background: url("../img/chromakey__header.jpg") no-repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url("../img/chromakey__header.jpg") no-repeat;
   background-size: cover;
+
+  @include tablets {
+    height: 100vh;
+    background-size: auto 100%;
+  }
 }
 
 .header__instaprinter {
   height: 625px;
-  background: url("../img/instaprinter__header.jpg") no-repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url("../img/instaprinter__header.jpg") no-repeat;
   background-size: cover;
-  background-position-y: -75px;
+
+  @include tablets {
+    height: 100vh;
+    background-size: auto 100%;
+  }
+
 }
 
 .header__sharstation {
   height: 625px;
-  background: url("../img/header__sharstation.jpg") no-repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url("../img/header__sharstation.jpg") no-repeat;
   background-size: cover;
-  background-position-y: -75px;
+
+  @include tablets {
+    height: 100vh;
+    background-size: auto 100%;
+  }
 }
 
 .header__props {
   height: 635px;
-  background: url("../img/header__props.jpg") no-repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url("../img/header__props.jpg") no-repeat;
   background-size: cover;
-  background-position-y: -75px;
+
+  @include tablets {
+    height: 100vh;
+  }
 }
 
 .header__more {
   height: 635px;
-  background: url("../img/header__more.jpg") no-repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url("../img/header__more.jpg") no-repeat;
   background-size: cover;
+
+  @include tablets {
+    height: 100vh;
+  }
 }
 
 .header__contacts {
@@ -342,8 +383,8 @@ html, body {
 
 
 .header__logo {
-  margin-bottom: 40px;
-  width: 310px;
+  margin-bottom: 30px;
+  width: 260px;
 
   @include phones {
     width: 240px;
@@ -408,13 +449,22 @@ html, body {
     margin-bottom: 0;
   }
 
+  &-smaller {
+    font-size: 50px;
+  }
+
   &-franshize {
     color: black;
-    font-size: 70px;
+    font-size: 50px;
     margin-bottom: 5px;
 
     @include tablets {
+      margin-bottom: 10px !important;
       font-size: 42px;
+    }
+
+    @include phones {
+      font-size: 30px;
     }
   }
 
@@ -436,7 +486,7 @@ html, body {
   font-family: 'NeoSansW1G-Bold', Optima, sans-serif;
   font-size: 40px;
   color: white;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   text-align: center;
 
   @include phones {
@@ -452,7 +502,6 @@ html, body {
   & p {
     margin: 0;
     padding: 0;
-    padding-bottom: 30px;
     font-size: 16px;
     font-family: "Neo Sans W1G", Optima, sans-serif;
   }
@@ -460,6 +509,10 @@ html, body {
   &-franshize {
     color: black;
     padding: 16px 14% 10px;
+
+    @include phones {
+      padding: 16px 4% 10px;
+    }
   }
 
   &-center {
@@ -711,13 +764,16 @@ html, body {
 
 .about__order-item {
   border-radius: 10px;
-  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.3);
   background: white;
   padding: 25px 2% 30px;
   flex: 29%;
   margin: 0 2% 25px;
   display: flex;
   flex-direction: column;
+
+  &:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  }
 
 }
 
@@ -780,11 +836,15 @@ html, body {
 }
 
 .logophb__section {
-  padding: 70px 21% 0 21%;
+  padding: 40px 21% 0 21%;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+
+  @include tablets {
+    padding: 40px 10% 0 10%;
+  }
 }
 
 .logo__cont {
@@ -832,7 +892,7 @@ html, body {
 }
 
 .main__joy {
-  padding-top: 30px;
+  padding-top: 60px;
 }
 
 .main__joy-title {
@@ -940,7 +1000,6 @@ html, body {
 
 .popup__title {
   text-transform: uppercase;
-  font-family: "Neo Sans W1G", Optima, sans-serif;
   font-size: 50px;
   flex: 100;
   display: flex;
@@ -959,23 +1018,24 @@ html, body {
   }
 
   @include phones {
-    flex: 230;
+    flex: 170;
   }
 
 }
 
 .popup__h2 {
-  flex: 100;
-  font-family: "Neo Sans W1G", Optima, sans-serif;
+  flex: 270;
   font-size: 24px;
 }
 
 .popup__text {
   flex: 100;
-  font-family: "Neo Sans W1G", Optima, sans-serif;
   font-size: 16px;
   width: 50%;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @include phones {
     width: 90%;
@@ -989,22 +1049,19 @@ html, body {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  padding: 35px 0;
+  padding: 0 0 100px 0;
 
   @include tablets {
     flex: 410;
   }
 }
 
-.popupform__order-name {
-}
 
 .order__name-input {
-  font-family: "Neo Sans W1G", Optima, sans-serif;
   font-size: 22px;
   padding: 12px;
   border-radius: 33px;
-  border: 1px solid;
+  border: 1px solid #b5b5b5;
   text-align: center;
   width: 100%;
 
@@ -1015,11 +1072,10 @@ html, body {
 }
 
 .order__tel-input {
-  font-family: "Neo Sans W1G", Optima, sans-serif;
   font-size: 24px;
   padding: 12px;
   border-radius: 33px;
-  border: 1px solid;
+  border: 1px solid #b5b5b5;
   text-align: center;
   width: 100%;
 
@@ -1029,18 +1085,11 @@ html, body {
 
 }
 
-.form__label {
-
-}
-
-.form__button {
-
-}
 
 .form__button-popup {
   width: 50%;
   text-align: center;
-  padding: 16px 0;
+  padding: 10px 0;
   font-size: 22px;
   border-radius: 33px;
   background: #FB5500;
@@ -1051,16 +1100,15 @@ html, body {
   }
 }
 
-.popupform__order-name {
 
-}
 
 .close__popup {
+  width: 44px;
   cursor: pointer;
   position: absolute;
   font-size: 45px;
   top: 0;
-  right: 3%;
+  right: 0;
 }
 
 .show {
@@ -1078,6 +1126,13 @@ html, body {
     margin-bottom: 0;
   }
 
+}
+
+.contacts__map {
+  & img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 ::-webkit-input-placeholder {

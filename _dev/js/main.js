@@ -1,4 +1,25 @@
-"use strict";
+//
+// $(document).ready(function() {
+//
+//
+//     $('.mobile__nav-button').on('click', function () {
+//         $('.mobile__menu').addClass("show");
+//
+//     });
+//
+//     $('.close__mob').on('click', function () {
+//         $('.mobile__menu').removeClass("show");
+//
+//     });
+//
+//
+//     $('.mobile__menu-item-services').on('click', function () {
+//         $('.dropdown__list').toggleClass("show");
+//
+//     });
+//
+// });
+
 
 $('.logo__slider').bxSlider({
     mode: 'fade',
@@ -16,41 +37,36 @@ $('.ticker__slider').bxSlider({
 
 /// mobile menu
 
+
 var dropdownItem = document.querySelector(".mobile__menu-item-services");
 var dropdownList = document.querySelector(".dropdown__list");
 
 dropdownItem.addEventListener("click", function (event) {
-    event.preventDefault();
     dropdownList.classList.toggle("show");
 });
 
 dropdownItem.addEventListener("tap", function (event) {
-    event.preventDefault();
     dropdownList.classList.toggle("show");
 });
 
 
 var openNav = document.querySelector(".mobile__nav-button");
-var closeNav = document.querySelector(".close");
+var closeNav = document.querySelector(".close__mob");
 var navMob = document.querySelector(".mobile__menu");
 
 openNav.addEventListener("click", function (event) {
-    event.preventDefault();
     navMob.classList.add("show");
 })
 
 closeNav.addEventListener("click", function (event) {
-    event.preventDefault();
     navMob.classList.remove("show");
 })
 
 openNav.addEventListener("tap", function (event) {
-    event.preventDefault();
     navMob.classList.add("show");
 })
 
 closeNav.addEventListener("tap", function (event) {
-    event.preventDefault();
     navMob.classList.remove("show");
 })
 
@@ -81,10 +97,10 @@ closePopup.addEventListener("click", function (event) {
 });
 
 
-// orderButton.addEventListener("tap", function (event) {
-//     event.preventDefault();
-//     popup.classList.add("show");
-// });
+orderButton.addEventListener("tap", function (event) {
+    event.preventDefault();
+    popup.classList.add("show");
+});
 
 overlay.addEventListener("tap", function (event) {
     popup.classList.remove("show");
@@ -228,3 +244,6 @@ $(document).ready(function () {
     $('.form__input').mask('+38(000) 000-00-00');
     $('.order__tel-input').mask('+38(000) 000-00-00');
 });
+
+
+
