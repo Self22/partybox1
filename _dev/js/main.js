@@ -238,6 +238,57 @@ closePopup.addEventListener("tap", function (event) {
 
 }());
 
+/////////////////// ajax franshize__form
+
+(function () {
+
+    var app = {
+
+        initialize: function () {
+            this.setUpListeners();
+        },
+
+        setUpListeners: function () {
+            $('#footerform').on('submit', app.submitForm);
+        },
+
+        submitForm: function (e) {
+            e.preventDefault();
+
+            var form = $(this),
+                submitBtn = form.find('button[type="submit"]');
+
+            submitBtn.attr('disabled', 'disabled');
+
+            console.log('Form__post!');
+            var str = form.serialize();
+
+            $.ajax({
+                url: 'contact_forms/contact_process2.php',
+                type: 'POST',
+                data: str
+            })
+                .done(function (msg) {
+                    if (msg === "OK") {
+                        var result = "<div>Спасибо за заявку! Мы вам перезвоним!</div>"
+                        form.html(result);
+                    } else {
+                        form.html(msg);
+                    }
+                })
+                .always(function () {
+                    submitBtn.removeAttr('disabled');
+                });
+
+        },
+
+    }
+
+    app.initialize();
+
+}());
+
+
 
 /////////////// mask
 $(document).ready(function () {

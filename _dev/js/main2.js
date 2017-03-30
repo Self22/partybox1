@@ -1,25 +1,56 @@
-/**
- * Created by USER on 29.03.2017.
- */
+"use strict";
+
 $(document).ready(function () {
 
+    var openNav = document.querySelector(".mobile__nav-button");
+    var closeNav = document.querySelector(".close__mob");
+    var navMob = document.querySelector(".mobile__menu");
 
-    $('.mobile__nav-button').on('click', function () {
-        console.log('yes');
-        $('.mobile__menu').addClass("show");
+    openNav.addEventListener("click", function (event) {
+        navMob.classList.add("show");
+    })
 
+    closeNav.addEventListener("click", function (event) {
+        navMob.classList.remove("show");
+    })
+
+    openNav.addEventListener("tap", function (event) {
+        navMob.classList.add("show");
+    })
+
+    closeNav.addEventListener("tap", function (event) {
+        navMob.classList.remove("show");
+    })
+
+
+    var dropdownItem = document.querySelector(".mobile__menu-item-services");
+    var dropdownList = document.querySelector(".dropdown__list");
+
+    dropdownItem.addEventListener("click", function (event) {
+        event.preventDefault();
+        dropdownList.classList.toggle("show");
     });
 
-    $('.close__mob').on('click', function () {
-        $('.mobile__menu').removeClass("show");
-
+    dropdownItem.addEventListener("tap", function (event) {
+        dropdownList.classList.toggle("show");
     });
 
-
-    $('.mobile__menu-item-services').on('click', function () {
-        $('.dropdown__list').toggleClass("show");
-
-    });
+    // $('.mobile__nav-button').on('click', function () {
+    //     console.log('yes');
+    //     $('.mobile__menu').addClass("show");
+    //
+    // });
+    //
+    // $('.close__mob').on('click', function () {
+    //     $('.mobile__menu').removeClass("show");
+    //
+    // });
+    //
+    //
+    // $('.mobile__menu-item-services').on('click', function () {
+    //     $('.dropdown__list').toggleClass("show");
+    //
+    // });
 
     $('.logo__slider').bxSlider({
         mode: 'fade',
@@ -202,6 +233,55 @@ closePopup.addEventListener("tap", function (event) {
 
 }());
 
+/////////////////// franshize footer__form
+
+(function () {
+
+    var app = {
+
+        initialize: function () {
+            this.setUpListeners();
+        },
+
+        setUpListeners: function () {
+            $('#franform-order').on('submit', app.submitForm);
+        },
+
+        submitForm: function (e) {
+            e.preventDefault();
+
+            var form = $(this),
+                submitBtn = form.find('button[type="submit"]');
+
+            submitBtn.attr('disabled', 'disabled');
+
+            console.log('Form__post!');
+            var str = form.serialize();
+
+            $.ajax({
+                url: 'contact_forms/contact_process3.php',
+                type: 'POST',
+                data: str
+            })
+                .done(function (msg) {
+                    if (msg === "OK") {
+                        var result = "<div>Спасибо за заявку! Мы вам перезвоним!</div>"
+                        form.html(result);
+                    } else {
+                        form.html(msg);
+                    }
+                })
+                .always(function () {
+                    submitBtn.removeAttr('disabled');
+                });
+
+        },
+
+    }
+
+    app.initialize();
+
+}());
 
 /////////////// mask
 $(document).ready(function () {
