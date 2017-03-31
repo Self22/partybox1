@@ -272,7 +272,11 @@ html, body {
 
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url("../img/header_index.jpg") no-repeat;
   background-position-y: 45%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
+
 
 
   @include desktop {
@@ -281,19 +285,31 @@ html, body {
   }
 
   @include tablets {
-    background-size: auto 100%;
+    background: url("../img/header_index.jpg") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
 
 }
 
 .header__about {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url("../img/header_about.jpg") no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   background-position-y: 20%;
 
   @include tablets {
     height: 100vh;
-    background-size: auto 100%;
+    background: url("../img/header_about.jpg") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
   }
 }
 
@@ -301,11 +317,19 @@ html, body {
   height: 645px;
   position: relative;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url("../img/photobooth__header.jpg") no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 
   @include tablets {
+    background: url("../img/photobooth__header.jpg") no-repeat;
     height: 100vh;
-    background-size: auto 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
   }
 }
 
@@ -322,22 +346,28 @@ html, body {
 .header__chromakey {
   height: 650px;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url("../img/chromakey__header.jpg") no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 
   @include tablets {
     height: 100vh;
-    background-size: auto 100%;
+
   }
 }
 
 .header__instaprinter {
   height: 625px;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url("../img/instaprinter__header.jpg") no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 
   @include tablets {
     height: 100vh;
-    background-size: auto 100%;
+
   }
 
 }
@@ -345,27 +375,36 @@ html, body {
 .header__sharstation {
   height: 625px;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url("../img/header__sharstation.jpg") no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 
   @include tablets {
     height: 100vh;
-    background-size: auto 100%;
   }
 }
 
 .header__props {
   height: 635px;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url("../img/header__props.jpg") no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 
   @include tablets {
     height: 100vh;
+
   }
 }
 
 .header__more {
   height: 635px;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url("../img/header__more.jpg") no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 
   @include tablets {
