@@ -60,6 +60,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 15px;
 }
 
 .menu-item-servises {
@@ -130,7 +131,7 @@
 
 }
 
-.order__button {
+.order__button, .button-franshize {
   text-align: center;
   border: none;
   cursor: pointer;
@@ -139,7 +140,7 @@
   font-size: 16px;
   text-decoration: none;
   background: #fb4419;
-  padding: 15px 45px;
+  padding: 14px 45px 16px;
   border-radius: 30px;
   text-transform: uppercase;
   color: white;
@@ -209,7 +210,8 @@
 ///////////////////////////////////
 
 .mobile__header, .mobile__menu-header {
-  position: relative;
+  position: absolute;
+  top: 0;
   height: 70px;
   background: white;
   display: none;
@@ -295,9 +297,10 @@
 }
 
 .mobile__menu-list {
+  margin-top: 70px;
   background: white;
   min-height: 100vh;
-  height: 700px;
+  height: 750px;
   padding: 40px 0 55px;
 }
 
@@ -328,6 +331,12 @@
 
   }
 
+}
+
+.order__button-mobmenu {
+  display: block;
+  margin: 0 auto;
+  margin-top: 41px;
 }
 
 .dropdown__list {

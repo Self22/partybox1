@@ -69,8 +69,11 @@ $(document).ready(function () {
 
 });
 
+/// popups
+
+//order
 var orderButton = document.querySelectorAll(".order__button");
-var popup = document.querySelector(".popup__order");
+var popupOrd = document.querySelector(".popup__order");
 var overlay = document.querySelector(".overlay");
 var closePopup = document.querySelector(".close__popup");
 
@@ -78,9 +81,31 @@ for (var i = 0; i < orderButton.length; i++) {
 
     orderButton[i].addEventListener("click", function (event) {
         event.preventDefault();
-        popup.classList.add("show");
+        popupOrd.classList.add("show");
     });
 }
+
+
+overlay.addEventListener("click", function (event) {
+    popupOrd.classList.remove("show");
+});
+
+closePopup.addEventListener("click", function (event) {
+    popupOrd.classList.remove("show");
+});
+
+
+//franshize
+
+var franButton = document.querySelector(".button-franshize");
+var popup = document.querySelector(".franshize__order");
+var overlay = document.querySelector(".overlay-fr");
+var closePopup = document.querySelector(".close__fr");
+
+
+franButton.addEventListener("click", function (event) {
+    popup.classList.add("show");
+});
 
 
 overlay.addEventListener("click", function (event) {
@@ -91,12 +116,6 @@ closePopup.addEventListener("click", function (event) {
     popup.classList.remove("show");
 });
 
-
-// orderButton.addEventListener("tap", function (event) {
-//     event.preventDefault();
-//     popup.classList.add("show");
-// });
-
 overlay.addEventListener("tap", function (event) {
     popup.classList.remove("show");
 });
@@ -104,6 +123,13 @@ overlay.addEventListener("tap", function (event) {
 closePopup.addEventListener("tap", function (event) {
     popup.classList.remove("show");
 });
+
+// orderButton.addEventListener("tap", function (event) {
+//     event.preventDefault();
+//     popup.classList.add("show");
+// });
+
+
 
 /////////////////// ajax popup__form
 

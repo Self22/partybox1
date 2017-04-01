@@ -16,7 +16,7 @@
 }
 
 html, body {
-  min-height: 100%;
+  height: 100%;
   font-family: 'NeoSansW1G', Optima, sans-serif;;
   width: 100%;
   line-height: 1.42;
@@ -255,21 +255,23 @@ html, body {
 }
 
 .header {
-  height: 565px;
+
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  padding-bottom: 40px;
 
   @include tablets {
-    height: 100vh;
+    padding-top: 70px;
   }
+
 
 }
 
 .header__index {
-
+  height: 645px;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url("../img/header_index.jpg") no-repeat;
   background-position-y: 45%;
   -webkit-background-size: cover;
@@ -285,16 +287,23 @@ html, body {
   }
 
   @include tablets {
-    background: url("../img/header_index.jpg") no-repeat;
+    height: 500px;
+    background: url("../img/header_index-mob.jpg") no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-attachment: fixed;
+  }
+
+  @include phones {
+    padding-bottom: 50px;
   }
 
 }
 
 .header__about {
+  height: 635px;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url("../img/header_about.jpg") no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -303,14 +312,20 @@ html, body {
   background-position-y: 20%;
 
   @include tablets {
-    height: 100vh;
-    background: url("../img/header_about.jpg") no-repeat;
+    height: 500px;
+    background: url("../img/header_about-mob.jpg") no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-attachment: fixed;
 
   }
+
+  @include phones {
+    padding-bottom: 50px;
+  }
+
 }
 
 .header__photobooth {
@@ -323,7 +338,7 @@ html, body {
   background-size: cover;
 
   @include tablets {
-    background: url("../img/photobooth__header.jpg") no-repeat;
+    background: url("../img/photobooth__header-mob.jpg") no-repeat;
     height: 100vh;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -331,6 +346,11 @@ html, body {
     background-size: cover;
 
   }
+
+  @include phones {
+    padding-bottom: 50px;
+  }
+
 }
 
 .header__franshize {
@@ -339,12 +359,14 @@ html, body {
   padding-bottom: 15px;
 
   @include phones {
+    padding: 0 10px;
     height: 90vh;
   }
 }
 
 .header__chromakey {
   height: 650px;
+
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url("../img/chromakey__header.jpg") no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -352,10 +374,24 @@ html, body {
   background-size: cover;
 
   @include tablets {
+    background: url("../img/chromakey__header-mob.jpg") no-repeat;
     height: 100vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position-x: -250px;
+    background-position-y: 80px;
 
   }
+
+  @include phones {
+    padding-bottom: 50px;
+  }
+
+
 }
+
 
 .header__instaprinter {
   height: 625px;
@@ -366,9 +402,19 @@ html, body {
   background-size: cover;
 
   @include tablets {
+    background: url("../img/instaprinter__header-mob.jpg") no-repeat;
     height: 100vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 
   }
+
+  @include phones {
+    padding-bottom: 50px;
+  }
+
 
 }
 
@@ -381,8 +427,18 @@ html, body {
   background-size: cover;
 
   @include tablets {
+    background: url("../img/header__sharstation-mob.jpg") no-repeat;
     height: 100vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
+
+  @include phones {
+    padding-bottom: 50px;
+  }
+
 }
 
 .header__props {
@@ -394,9 +450,18 @@ html, body {
   background-size: cover;
 
   @include tablets {
+    background: url("../img/header__props-mob.jpg") no-repeat;
     height: 100vh;
-
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
+
+  @include phones {
+    padding-bottom: 50px;
+  }
+
 }
 
 .header__more {
@@ -408,8 +473,18 @@ html, body {
   background-size: cover;
 
   @include tablets {
+    background: url("../img/header__more-mob.jpg") no-repeat;
     height: 100vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
+
+  @include phones {
+    padding-bottom: 50px;
+  }
+
 }
 
 .header__contacts {
@@ -426,7 +501,7 @@ html, body {
   width: 260px;
 
   @include phones {
-    width: 240px;
+    width: 190px;
   }
 
   & img {
@@ -445,6 +520,10 @@ html, body {
   &-franshize {
     color: black;
     text-align: center;
+
+    @include tablets {
+      margin-bottom: 0;
+    }
   }
 
   @include phones {
@@ -462,7 +541,6 @@ html, body {
   border: none;
   text-transform: uppercase;
   color: white;
-  margin-bottom: 40px;
   cursor: pointer;
   letter-spacing: 1px;
 
@@ -577,6 +655,8 @@ html, body {
 
   @include tablets {
     height: 70vh;
+    background: url("../img/glasses__girls-mob.jpg") no-repeat;
+    background-size: cover;
   }
 }
 
@@ -662,6 +742,8 @@ html, body {
   background-position-y: 50%;
 
   @include tablets {
+    background: url("../img/helloween__girls-mob.jpg") no-repeat;
+    background-size: cover;
     height: 70vh;
     background-position-x: 50%;
 
@@ -895,10 +977,28 @@ html, body {
   flex: 33%;
   padding: 5%;
   margin-bottom: 5px;
+  text-decoration: none !important;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   & img {
     max-width: 100%;
     height: auto;
+  }
+
+  & h4 {
+    margin-top: 35px;
+    text-transform: uppercase;
+    color: #939292;
+    font-family: "Neo Sans W1G", Optima, sans-serif;
+    font-size: 24px;
+
+    @include tablets {
+      font-size: 16px;
+    }
   }
 
   @include tablets {
@@ -996,13 +1096,13 @@ html, body {
 
 ////////////////////////// popup
 
-.popup__order {
+.popup__order, .franshize__order {
   position: relative;
   display: none;
   z-index: 5;
 }
 
-.overlay {
+.overlay, .overlay-fr {
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -1016,8 +1116,8 @@ html, body {
 
 .popup__form-order {
   position: fixed;
-  width: 60%;
-  height: 490px;
+  width: 57%;
+  height: 400px;
   background: white;
   border-radius: 15px;
   z-index: 5;
@@ -1044,7 +1144,7 @@ html, body {
 .popup__title {
   text-transform: uppercase;
   font-size: 50px;
-  flex: 100;
+  flex: 649;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1058,6 +1158,7 @@ html, body {
 
   @include tablets {
     font-size: 26px;
+    flex: 280;
   }
 
   @include phones {
@@ -1067,12 +1168,17 @@ html, body {
 }
 
 .popup__h2 {
-  flex: 270;
-  font-size: 24px;
+  flex: 293;
+  font-size: 30px;
+  text-transform: lowercase;
+
+  @include tablets {
+    flex: 80;
+  }
 }
 
 .popup__text {
-  flex: 100;
+  flex: 538;
   font-size: 16px;
   width: 50%;
   text-align: center;
@@ -1087,7 +1193,7 @@ html, body {
 }
 
 .popupform-order {
-  flex: 200;
+  flex: 587;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -1143,13 +1249,11 @@ html, body {
   }
 }
 
-
-
-.close__popup {
-  width: 44px;
+.close__popup, .close__fr {
+  width: 34px;
   cursor: pointer;
   position: absolute;
-  font-size: 45px;
+  font-size: 40px;
   top: 0;
   right: 0;
 }
@@ -1176,6 +1280,15 @@ html, body {
     width: 100%;
     height: auto;
   }
+}
+
+.franshize__deal {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.bx-wrapper .bx-controls-direction a {
+  display: none;
 }
 
 ::-webkit-input-placeholder {

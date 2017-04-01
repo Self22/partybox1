@@ -13,6 +13,30 @@
     <div class="overlay"></div>
     <div class="popup__form-order">
         <span class="close__popup">&times</span>
+        <div class="popup__title">Заказать PARTY&#160;BOX</div>
+        <div class="popup__h2">Очень легко!</div>
+        <div class="popup__text">Просто свяжитесь с нами или оставьте заявку
+            на обратный звонок и наш менеджер
+            перезвонит Вам!
+        </div>
+        <form id="popupform-order" class="popupform-order">
+            <div class="popupform__order-name form-group">
+                <label for="name"></label>
+                <input type="text" name="name" class="order__name-input" id="name" placeholder="Ваше имя" required>
+            </div>
+            <div class="popupform__order-tel form-group">
+                <label for="tel"></label>
+                <input type="text" name="tel" class="order__tel-input" id="tel" placeholder="0ХХ ХХХ ХХ ХХ">
+            </div>
+            <label for="popup__order-btn" class="form__label"></label>
+            <input class="form__button form__button-popup" type="submit" value="ОТПРАВИТЬ" id="popup__order-btn">
+        </form>
+    </div>
+</div>
+<div class="franshize__order">
+    <div class="overlay-fr"></div>
+    <div class="popup__form-order">
+        <span class="close__fr">&times</span>
         <div class="popup__title">Получить франшизу</div>
 
         <div class="popup__text">Свяжитесь с нами или оставьте заявку на обратный звонок и наш менеджер перезвонит Вам!
@@ -76,10 +100,10 @@
                                                                           class="mobile__menu-link">Франшиза</a></li>
                 <li class="mobile__menu-item"><a href="contacts.html"
                                                  class="mobile__menu-link">Контакты</a></li>
-                <li class="mobile__menu-item"><a href="contacts-ukr.html"
+                <li class="mobile__menu-item"><a href="franshize-ukr.html"
                                                  class="mobile__menu-link mobile__menu-link-lg">Ukr</a></li>
+                <button class="order__button order__button-mobmenu">Заказать <span>PARTY</span> box</button>
             </ul>
-            <button class="order__button">Заказать <span>PARTY</span> box</button>
         </div>
     </nav>
     <nav class="main__menu">
@@ -135,7 +159,7 @@
         <p class="text__section">Мы предлагаем выгодные условия сотрудничества, высокорентабельный бизнес, интересные
             проекты.
         </p>
-        <button class="order__button order__button-franshize">получить консультацию</button>
+        <button class="button-franshize">получить консультацию</button>
     </article>
 
 
