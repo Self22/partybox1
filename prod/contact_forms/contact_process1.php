@@ -1,6 +1,6 @@
 <?php
 
-define("CONTACT_FORM", 'kateryna.starcheus@gmail.com ');
+define("CONTACT_FORM", 'partyboxua@gmail.com');
 
 
 $post = (!empty($_POST)) ? true : false;
