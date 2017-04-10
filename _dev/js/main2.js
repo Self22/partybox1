@@ -1,5 +1,14 @@
 "use strict";
 
+/////////////// mask
+
+$(document).ready(function () {
+    $('.form__input').mask('+38(000) 000-00-00');
+    $('.order__tel-input').mask('+38(000) 000-00-00');
+});
+
+//// mobile-nav
+
 $(document).ready(function () {
 
     var openNav = document.querySelector(".mobile__nav-button");
@@ -95,34 +104,7 @@ closePopup.addEventListener("click", function (event) {
 });
 
 
-//franshize
 
-var franButton = document.querySelector(".button-franshize");
-var popup = document.querySelector(".franshize__order");
-var overlay = document.querySelector(".overlay-fr");
-var closePopup = document.querySelector(".close__fr");
-
-
-franButton.addEventListener("click", function (event) {
-    popup.classList.add("show");
-});
-
-
-overlay.addEventListener("click", function (event) {
-    popup.classList.remove("show");
-});
-
-closePopup.addEventListener("click", function (event) {
-    popup.classList.remove("show");
-});
-
-overlay.addEventListener("tap", function (event) {
-    popup.classList.remove("show");
-});
-
-closePopup.addEventListener("tap", function (event) {
-    popup.classList.remove("show");
-});
 
 // orderButton.addEventListener("tap", function (event) {
 //     event.preventDefault();
@@ -259,6 +241,35 @@ closePopup.addEventListener("tap", function (event) {
 
 }());
 
+//franshize
+
+var franButton = document.querySelector(".button-franshize");
+var popup = document.querySelector(".franshize__order");
+var overlay = document.querySelector(".overlay-fr");
+var closePopup = document.querySelector(".close__fr");
+
+
+franButton.addEventListener("click", function (event) {
+    popup.classList.add("show");
+});
+
+
+overlay.addEventListener("click", function (event) {
+    popup.classList.remove("show");
+});
+
+closePopup.addEventListener("click", function (event) {
+    popup.classList.remove("show");
+});
+
+overlay.addEventListener("tap", function (event) {
+    popup.classList.remove("show");
+});
+
+closePopup.addEventListener("tap", function (event) {
+    popup.classList.remove("show");
+});
+
 /////////////////// franshize footer__form
 
 (function () {
@@ -309,9 +320,5 @@ closePopup.addEventListener("tap", function (event) {
 
 }());
 
-/////////////// mask
-$(document).ready(function () {
-    $('.form__input').mask('+38(000) 000-00-00');
-    $('.order__tel-input').mask('+38(000) 000-00-00');
-});
+
 

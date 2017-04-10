@@ -23,7 +23,7 @@ if ($post) {
 
     if (!$error) {
         $mail = mail(CONTACT_FORM, $subject, $message,
-            "From: perezvon@photobox.in.ua\r\n"
+            "From: perezvon@party-box.com.ua\r\n"
             . "Reply-To: " . $email . "\r\n"
             . "Content-type: text/html; charset=utf-8 \r\n"
             . "X-Mailer: PHP/" . phpversion());

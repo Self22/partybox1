@@ -4,6 +4,7 @@
  * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
 @import url(../fonts/font-awesome.css);
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -859,6 +860,9 @@ textarea {
 
 * {
   box-sizing: border-box; }
+  @media screen and (max-width: 330px) {
+    * h1, * h2, * h3, * h4, * div, * p, * span, * button, * input, * li {
+      font-family: 'Titillium Web', sans-serif !important; } }
 
 html, body {
   height: 100%;
@@ -1124,8 +1128,8 @@ html, body {
 
 .header__index {
   height: 645px;
-  background: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.3)), url("../img/header_index.jpg") no-repeat;
-  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.3)), url("../img/header_index.jpg") no-repeat;
+  background: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.3)), url("../img/header_index.jpg") no-repeat center;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.3)), url("../img/header_index.jpg") no-repeat center;
   background-position-y: 45%;
   background-size: cover; }
   @media screen and (max-width: 1200px) {
@@ -1135,25 +1139,23 @@ html, body {
   @media screen and (max-width: 768px) {
     .header__index {
       height: 500px;
-      background: url("../img/header_index-mob.jpg") no-repeat;
-      background-size: cover;
-      background-attachment: fixed; } }
+      background: url("../img/header_index-mob.jpg") no-repeat center;
+      background-size: cover; } }
   @media screen and (max-width: 480px) {
     .header__index {
       padding-bottom: 50px; } }
 
 .header__about {
   height: 635px;
-  background: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.3)), url("../img/header_about.jpg") no-repeat;
-  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.3)), url("../img/header_about.jpg") no-repeat;
+  background: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.3)), url("../img/header_about.jpg") no-repeat center;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.3)), url("../img/header_about.jpg") no-repeat center;
   background-size: cover;
   background-position-y: 20%; }
   @media screen and (max-width: 768px) {
     .header__about {
       height: 500px;
-      background: url("../img/header_about-mob.jpg") no-repeat;
-      background-size: cover;
-      background-attachment: fixed; } }
+      background: url("../img/header_about-mob.jpg") no-repeat center;
+      background-size: cover; } }
   @media screen and (max-width: 480px) {
     .header__about {
       padding-bottom: 50px; } }
@@ -1180,7 +1182,7 @@ html, body {
   @media screen and (max-width: 480px) {
     .header__franshize {
       padding: 0 10px;
-      height: 90vh; } }
+      height: 115vh; } }
 
 .header__chromakey {
   height: 650px;
@@ -1224,7 +1226,8 @@ html, body {
       background-size: cover; } }
   @media screen and (max-width: 480px) {
     .header__sharstation {
-      padding-bottom: 50px; } }
+      padding-bottom: 50px;
+      height: 105vh; } }
 
 .header__props {
   height: 635px;
@@ -1238,6 +1241,7 @@ html, body {
       background-size: cover; } }
   @media screen and (max-width: 480px) {
     .header__props {
+      height: 105vh;
       padding-bottom: 50px; } }
 
 .header__more {
@@ -1258,13 +1262,20 @@ html, body {
   height: 280px; }
   .header__contacts h1, .header__contacts p {
     color: black; }
+  @media screen and (max-width: 480px) {
+    .header__contacts {
+      padding: 0 10px; } }
 
 .header__logo {
   margin-bottom: 30px;
   width: 260px; }
   @media screen and (max-width: 480px) {
+    .header__logo-shar {
+      margin-bottom: 87px; } }
+  @media screen and (max-width: 480px) {
     .header__logo {
-      width: 190px; } }
+      width: 190px;
+      margin-top: 60px; } }
   .header__logo img {
     max-width: 100%;
     height: auto; }
@@ -1282,11 +1293,14 @@ html, body {
       .header__text-franshize {
         margin-bottom: 0; } }
   @media screen and (max-width: 480px) {
+    .header__text-props {
+      margin-bottom: 40px; } }
+  @media screen and (max-width: 480px) {
     .header__text {
-      font-size: 20px; } }
+      font-size: 20px;
+      margin-bottom: 10px; } }
 
 .header__order-button {
-  font-family: "Neo Sans W1G", Optima, sans-serif;
   font-size: 22px;
   background: #FB5500;
   padding: 15px 105px;
@@ -1325,15 +1339,23 @@ html, body {
         font-size: 42px; } }
     @media screen and (max-width: 480px) {
       .main__slogan-franshize {
-        font-size: 30px; } }
+        font-size: 26px !important; } }
   @media screen and (max-width: 768px) {
     .main__slogan {
       font-size: 42px;
       margin-bottom: 60px; } }
   @media screen and (max-width: 480px) {
     .main__slogan {
+      margin-bottom: 30px;
       font-size: 30px;
       margin-top: 20px; } }
+
+@media screen and (max-width: 480px) {
+  .main__slogan-props {
+    margin-bottom: 0; } }
+
+.main__slogan-shar {
+  margin-bottom: 15px; }
 
 .header__slogan-index {
   text-transform: uppercase;
@@ -1351,6 +1373,9 @@ html, body {
 .text__section {
   padding: 25px 14% 25px;
   margin: 0; }
+  @media screen and (max-width: 480px) {
+    .text__section {
+      padding: 15px 8% 15px; } }
   .text__section p {
     margin: 0;
     padding: 0;
@@ -1370,6 +1395,8 @@ html, body {
       font-size: 36px; }
   .text__section-more {
     padding-top: 0; }
+  .text__section-left {
+    text-align: left; }
 
 .glasses__girls {
   height: 725px;
@@ -1522,36 +1549,31 @@ html, body {
 .about__order {
   background: #EBECEC;
   padding: 50px 5% 65px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch; }
+  font-size: 0; }
+  @media screen and (max-width: 768px) {
+    .about__order {
+      padding: 50px 5% 30px; } }
 
 .about__order-item {
+  display: inline-block;
+  vertical-align: top;
   border-radius: 10px;
   background: white;
   padding: 25px 2% 30px;
-  -webkit-box-flex: 29%;
-      -ms-flex: 29%;
-          flex: 29%;
+  width: 29%;
   margin: 0 2% 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; }
+  text-align: center;
+  height: 445px; }
   .about__order-item:hover {
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3); }
+  @media screen and (max-width: 768px) {
+    .about__order-item {
+      width: 100%;
+      height: 350px; } }
+  @media screen and (max-width: 480px) {
+    .about__order-item {
+      margin: 0 0 25px;
+      padding: 25px 6% 30px; } }
 
 .about__order-title {
   font-family: "Neo Sans W1G", Optima, sans-serif;
@@ -1561,7 +1583,12 @@ html, body {
   margin-bottom: 30px; }
 
 .about__order-text {
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  font-size: 16px;
+  height: 200px; }
+  @media screen and (max-width: 768px) {
+    .about__order-text {
+      height: 130px; } }
 
 .about__order-button {
   margin-top: auto;
@@ -1570,6 +1597,9 @@ html, body {
   @media screen and (max-width: 1200px) {
     .about__order-button {
       padding: 7px 45px; } }
+  @media screen and (max-width: 480px) {
+    .about__order-button {
+      padding: 15px; } }
 
 .logo__big-block {
   display: -webkit-box;
@@ -1617,68 +1647,47 @@ html, body {
               flex: 25%; } }
 
 .logophb__section {
-  padding: 40px 21% 55px 21%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  padding: 40px 19% 55px 23%; }
   @media screen and (max-width: 768px) {
     .logophb__section {
-      padding: 40px 10% 0 10%; } }
+      padding: 40px 10% 50px 10%; } }
 
 .logo__cont {
-  width: 18%;
-  -webkit-box-flex: 33%;
-      -ms-flex: 33%;
-          flex: 33%;
-  padding: 5%;
+  display: inline-block;
+  width: 30%;
   margin-bottom: 5px;
-  text-decoration: none !important;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  margin-right: 1%;
+  text-decoration: none !important; }
   .logo__cont img {
     max-width: 100%;
-    height: auto; }
+    height: auto;
+    padding: 11%; }
   .logo__cont h4 {
-    margin-top: 35px;
+    margin-top: 15px;
     text-transform: uppercase;
     color: #939292;
     font-family: "Neo Sans W1G", Optima, sans-serif;
-    font-size: 24px; }
+    font-size: 24px;
+    text-align: center; }
+    @media screen and (max-width: 1200px) {
+      .logo__cont h4 {
+        font-size: 18px; } }
     @media screen and (max-width: 768px) {
       .logo__cont h4 {
         font-size: 16px; } }
   @media screen and (max-width: 768px) {
     .logo__cont {
-      -webkit-box-flex: 50%;
-          -ms-flex: 50%;
-              flex: 50%; } }
+      width: 49%;
+      margin-right: 0; } }
 
 .logo__slider {
   height: 390px;
   list-style: none;
   padding: 0;
   margin: 0; }
+  @media screen and (max-width: 480px) {
+    .logo__slider {
+      padding-left: 4%; } }
 
 .logo__slide {
   height: 386px;
