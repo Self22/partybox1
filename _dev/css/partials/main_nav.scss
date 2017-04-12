@@ -177,6 +177,28 @@
 
 }
 
+.dropdown__lg2 {
+  display: none;
+  position: absolute;
+  font-family: 'NeoSansW1G', Optima, sans-serif;
+  font-weight: bolder;
+  font-size: 16px;
+  text-decoration: none !important;
+  color: black;
+  background: #FBD615;
+  top: 90px;
+  height: 45px;
+  padding-top: 9px;
+  width: 100%;
+  text-align: center;
+  left: 0;
+
+  &:hover {
+    background: white;
+    color: black;
+  }
+}
+
 .dropdown__lg {
   display: none;
   position: absolute;
@@ -202,6 +224,11 @@
 .menu-item-lg:hover .dropdown__lg {
   display: block;
 }
+
+.menu-item-lg:hover .dropdown__lg2 {
+  display: block;
+}
+
 
 .dropdown__active {
   background: white !important;
@@ -327,8 +354,16 @@
     position: relative;
     opacity: 0.3;
 
+  }
 
-
+  &-lg {
+    display: inline-block;
+    font-family: 'NeoSansW1G', Optima, sans-serif;
+    padding: 10px;
+    border: 1px solid;
+    margin: 0 15px 0 0;
+    width: 50px;
+    text-align: center;
   }
 
 }
