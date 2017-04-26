@@ -1313,7 +1313,6 @@ html, body {
 .header__text {
   text-align: center;
   font-size: 30px;
-  font-family: "Neo Sans W1G", Optima, sans-serif;
   color: white;
   margin-bottom: 50px; }
   .header__text-franshize {
@@ -1409,8 +1408,8 @@ html, body {
   .text__section p {
     margin: 0;
     padding: 0;
-    font-size: 16px;
-    font-family: "Neo Sans W1G", Optima, sans-serif; }
+      font-size: 16px;
+  }
   .text__section-franshize {
     color: black;
     padding: 16px 14% 10px; }
@@ -1748,7 +1747,6 @@ html, body {
   padding-top: 60px; }
 
 .main__joy-title {
-  font-family: "Neo Sans W1G", Optima, sans-serif;
   font-size: 24px;
   text-align: center;
   -webkit-box-flex: 100%;
