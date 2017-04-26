@@ -1408,8 +1408,7 @@ html, body {
   .text__section p {
     margin: 0;
     padding: 0;
-      font-size: 16px;
-  }
+    font-size: 16px; }
   .text__section-franshize {
     color: black;
     padding: 16px 14% 10px; }
